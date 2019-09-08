@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Georg Nikitin](https://up.htmlacademy.ru/htmlcss/26/user/1118677).
-* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/id8589).
+* Наставник:  [Вадим Новаш](https://htmlacademy.ru/profile/id8589).
 
 ---
 
