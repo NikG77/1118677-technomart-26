@@ -57,9 +57,9 @@
     </header>
       
     <main>
-      <h1>Интернет-магазин  строительных материалов и инструментов для ремонта Техномарт</h1>
+      <h1 class="visually-hidden">Интернет-магазин  строительных материалов и инструментов для ремонта Техномарт</h1>
       <section class="about-us">
-        <h2>Информация о компаниии Техномарт</h2>
+        <h2 class="visually-hidden">Информация о компаниии Техномарт</h2>
         <div class="slogan">
           <h3>Компания «Техномарт»</h3>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -118,7 +118,7 @@
                 </a>
             </li>
             <li class="social-item">
-                <a class="social-link" href="#">Инстаграм
+                <a class="social-link" href="#">
                     <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграмм">  
                 </a>
             </li>
@@ -133,5 +133,38 @@
         </p>
       </div>
     </footer> 
+    <section class="??-contact">
+      <h3 class="visually-hidden">
+        Карта как до нас добраться
+      </h3>
+      <p>
+        <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+      <button type="button">
+        Закрыть
+      </button>
+    </section>
+
+    <section class="??-write-us">
+      <h3 class="visually-hidden">Написать нам</h3>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p class="write-us-user-name">
+          <label for="user-name">Ваше имя</label>
+          <input id="user-name" type="text" name="user-name" placeholder=" Имя Фамилия">
+        </p>
+        <p class="write-us-user-mail">
+          <label for="user-mail">Ваш e-mail:</label>
+          <input id="user-mail" type="text" name="user-mail" placeholder="email@example.com">
+        </p>
+        <p class="write-us-message">
+          <label for="user-message">Текст письма:</label>
+          <input id="user-message" type="text" name="user-message" placeholder="В свободной форме">
+        </p>
+        <button type="submit">
+          Отправить
+        </button>
+      </form>   
+    </section>
+
   </body>
 </html>
