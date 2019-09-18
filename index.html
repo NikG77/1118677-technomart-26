@@ -3,23 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет магазин "Техномарт"</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body class="page">
     <header class="page-header">
       <div class="header-top-row">
         <div class="logo">
-          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт"> 
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт">
         </div>
         <div class="search">
-          <img src="img/icon-search.svg" width="17" height="17" alt="Иконка поиск">
-          <label>Поиск:<input type="text" name="search"></label>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="search-box">
+              <img src="img/icon-search.svg" class="icon-top" width="17" height="17" alt="Иконка поиск">
+            </label>
+            <input id="search-box" type="text" name="search-box" placeholder="Поиск:">
+            <button type="submit"></button>
+          </form>
         </div>
         <div class="bookmarkers">
-          <img src="img/icon-bookmark.svg" width="14" height="16" alt="Иконка закладки">
+          <img src="img/icon-bookmark.svg" class="icon-top" width="14" height="16" alt="Иконка закладки">
           <a href="bookmarkers.html">Закладки: 0</a>
         </div>
         <div class="order">
-          <img src="img/icon-cart.svg" width="15" height="15" alt="Иконка корзинки">
+          <img src="img/icon-cart.svg" class="icon-top" width="15" height="15" alt="Иконка корзинки">
           <a href="order.html">Корзина: 0</a>
         </div>
         <div class="buy">
@@ -28,34 +37,36 @@
       </div>
       <div class="header-middle-row">
         <p class="page-title">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
-        <div class="header-contacts"> 
-          <img src="img/icon-phone.svg" width="19" height="19" alt="Иконка телефона">
-          <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="header-contacts">
+          <div class="contacts-tel">
+            <img src="img/icon-phone.svg" class="icon" width="19" height="19" alt="Иконка телефона">
+            <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
+        <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="user-login">
           <li class="personal-enter">
-              <img src="img/icon-login.svg" width="20" height="17" alt="Иконка входа">
+              <img src="img/icon-login.svg" class="icon-middle" width="20" height="17" alt="Иконка входа">
             <a href="personal-enter.html">Войти</a>
           </li>
-          <li>   
+          <li class="registration">
             <a href="registration.html">Регистрация</a>
-          </li> 
+          </li>
         </ul>
       </div>
       <nav class="navigation">
           <ul class="navigation-list">
-            <li>Главная</li>
+            <li class="active"><a>Главная</a>></li>
             <li><a href="company.html">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="special-offers.html">Спецпредложения</a></li>
             <li><a href="delavery.html">Доставка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
-            </ul> 
+            </ul>
         </nav>
     </header>
-      
+
     <main>
       <h1 class="visually-hidden">Интернет-магазин  строительных материалов и инструментов для ремонта Техномарт</h1>
       <section class="about-us">
@@ -82,7 +93,7 @@
 
     <footer class="page-footer">
       <div class="footer-top-row">
-        <div class="logo"> 
+        <div class="logo">
           <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Техномарт">
         </div>
         <nav class="footer-navigation">
@@ -102,7 +113,7 @@
           <li><a href="technics.html">Техника</a></li>
           <li><a href="tool.html">Инструмент</a></li>
           <li><a href="special-offers.html">Спецпредложения</a></li>
-        </ul> 
+        </ul>
       </div>
       <div class="footer-bottom-row">
         <p class="copyright">© 2010–2019 Компания «Техномарт» , Все права защищены</p>
@@ -119,7 +130,7 @@
             </li>
             <li class="social-item">
                 <a class="social-link" href="#">
-                    <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграмм">  
+                    <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграмм">
                 </a>
             </li>
         </ul>
@@ -128,12 +139,12 @@
           <a href=" mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru</a>
         </p>
         <p class="developer">
-          Разработано- 
+          Разработано-
           <a href="https://htmlacademy.ru/htmlcss" target="_blank">htmlacademy.ru</a>
         </p>
       </div>
-    </footer> 
-    <section class="??-contact">
+    </footer>
+    <section class=modal-contact">
       <h3 class="visually-hidden">
         Карта как до нас добраться
       </h3>
@@ -145,7 +156,7 @@
       </button>
     </section>
 
-    <section class="??-write-us">
+    <section class="modal-write-us">
       <h3 class="visually-hidden">Написать нам</h3>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p class="write-us-user-name">
@@ -154,16 +165,17 @@
         </p>
         <p class="write-us-user-mail">
           <label for="user-mail">Ваш e-mail:</label>
-          <input id="user-mail" type="text" name="user-mail" placeholder="email@example.com">
+          <input id="user-mail" type="email" name="user-mail" placeholder="email@example.com">
         </p>
         <p class="write-us-message">
           <label for="user-message">Текст письма:</label>
+          <textarea name="user-message" id="cuser-message" rows="4" cols="70">В свободной форме</textarea>
           <input id="user-message" type="text" name="user-message" placeholder="В свободной форме">
         </p>
         <button type="submit">
           Отправить
         </button>
-      </form>   
+      </form>
     </section>
 
   </body>
