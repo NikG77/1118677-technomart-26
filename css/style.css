@@ -84,6 +84,7 @@ h3 {
   object-fit: contain;
   opacity: 0.3;
 }
+
 .header-top-row .search {
   width: 270px;
   height: 42px;
@@ -107,6 +108,7 @@ h3 {
 .header-middle-row {
   background-color: #f4f7f9;
 }
+
 .page-title {
   padding-left: 183px;
   padding-top: 54px;
@@ -132,6 +134,7 @@ h3 {
   text-align: left;
   color: #ee3643;
 }
+
 .header-adress {
   width: 250px;
   height: 13px;
@@ -140,12 +143,11 @@ h3 {
   text-align: center;
   color: #32425c;
 }
+
 .personal-enter {
   width: 121px;
   height: 45px;
-
   font-size: 21px;
-
   line-height: 1;
   background-color: #ffffff;
   color: #000000;
@@ -191,7 +193,6 @@ h3 {
 .navigation-list li:hover {
   background-color: #32425c;
 }
-
 
 .navigation-list li:active {
   background-color: #1d2739;
@@ -453,9 +454,4 @@ h3 {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
- 
-}
-
-.legend {
-  text-decoration: none;
 }
