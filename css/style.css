@@ -1,25 +1,24 @@
 body {
   margin: 0;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-size: 17px;
   line-height: 18px;
+  font-weight: normal;
   color: #000000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1200px;
+
 }
 
 a {
   text-decoration: none;
-}
-
-/*.search a,
-.bookmarkers a,
-.order a,
-.buy a*/
-a,
-.navigation a {
   color:#ffffff;
- }
+}
 
 h1,
 h2,
@@ -27,14 +26,7 @@ h3 {
   text-transform: uppercase;
 }
 
-
-/* какой вариант предпочтительней
-ul.user-login,
-ul.navigation-list,
-ul.footer-navigation-list,
-ul.footer-catalog-list,
-ul.carriers li */
-li {
+ul {
   list-style: none;
 }
 
@@ -47,12 +39,32 @@ li {
 }
 
 :focus {
-  outline: none; }
+  outline: none;
+}
+
+.main-header,
+.page-header {
+  background-color: #f4f7f9;
+}
+
+.container {
+width: 940px;
+margin: 0 auto;
+padding: 0 0;
+}
 
 .header-top-row {
+  margin: 0;
+  height: 42px;
   background-color: #293449;
   color: #ffffff;
 }
+
+.header-top-row .container {
+display: flex;
+
+}
+
 .header-top-row:hover {
   background-color: #212a3a;
 }
@@ -60,9 +72,12 @@ li {
 .logo {
   width: 220px;
   height: 47px;
+
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
+  text-align: center;
 }
+
 .logo:hover {
   background-color: #ca2c37;
 }
@@ -71,25 +86,86 @@ li {
   background-color: #ba2732;
 }
 
+.search {
+  /*width: 270px;*/
+flex-grow: 1;
+ }
+
+
+.search button {
+  order: 0;
+  }
+
 .icon-top {
   opacity: 0.3;
 }
 
-.search {
-  width: 270px;
-  height: 42px;
-}
-/* Нужна помощь прописываю цвет белый в поиске, в отладке показывает белый, но он не белый */
-.search input {
+input[type="search"] {
   background-color: #293449;
-  color:#ffffff;
-  border: none;
+  border:none;
+  color: #ffffff;
 }
-.search:hover input{
+
+input[type="search"]::-moz-placeholder {
+  color: #ffffff;
+}
+input[type="search"]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type="search"]:-ms-input-placeholder {
+  color: #ffffff;
+}
+input[type="search"]::-ms-input-placeholder {
+  color: #ffffff;
+}
+input[type="search"]::placeholder {
+  color: #ffffff;
+}
+
+input[type="search"]:hover {
   background-color: #212a3a;
 }
 
-.search:hover,
+input[type="search"]:focus {
+  background-color: #ffffff;
+  color: #000000;
+/* не смог в фокусе печатолось в placeholder слово Перфоратор"
+  input[placeholder]: "Перфоратор"; */
+}
+
+
+button.icon-search {
+  background-repeat: no-repeat;
+  background-color:#293449;
+  border: none;
+}
+
+button.icon-search > svg {
+  opacity: 0.3;
+  fill: #ffffff;
+}
+
+button.icon-search:hover > svg {
+  opacity: 1;
+}
+input:focus + button > {
+  background-color: #ffffff;
+  }
+
+input:focus + button > svg {
+  background-color: #ffffff;
+  fill: #ee3643;
+  opacity: 1;
+}
+
+.bookmarkers {
+flex-grow: 1;
+}
+
+.order {
+  flex-grow: 1;
+}
+
 .bookmarkers:hover,
 .order:hover {
   background-color: #212a3a;
@@ -101,42 +177,21 @@ li {
   opacity: 1;
 }
 
-.search:focus {
-  background-color: #ffffff;
+.search:focus .icon-top {
+  opacity: 1;
 }
 
-.search:focus input {
-  background-color: #ffffff;
-  color: #000000;
-  /* не смог в фокусе печатолось в placeholder слово Перфоратор"*/
-}
-
-search:focus .icon-top {
-    opacity: 1;
-}
-
-.search:hover,
-.bookmarkers:hover,
-.order:hover {
-  background-color: #212a3a;
-}
-
-.search:active,
 .bookmarkers:active,
 .order:active {
   opacity: 0.6;
+  background-color: #161d29;
 }
 
-.search:active .icon-top,
 .bookmarkers:active .icon-top,
 .order:active  .icon-top{
   opacity: 0.5;
 }
 
-.bookmarkers:active,
-.order:active {
-  background-color: #161d29;
-}
 
 .buy {
   width: 150px;
@@ -154,12 +209,18 @@ search:focus .icon-top {
 }
 
 .header-middle-row {
+  margin-top: 60px;
+  min-height: 60px;
   background-color: #f4f7f9;
 }
 
+.header-middle-row .container {
+  display: flex;
+}
+
 .page-title {
+  margin-left:30px;
   width: 196px;
-  height: 60px;
   font-size: 16px;
   font-style: italic;
   line-height: 1.44;
@@ -181,7 +242,7 @@ search:focus .icon-top {
 }
 
 .header-adress {
-  width: 250px;
+  width: 270px;
 
   font-size: 14px;
   line-height: 1.71;
@@ -189,8 +250,12 @@ search:focus .icon-top {
   color: #32425c;
 }
 
+.user-login {
+  display: flex;
+}
+
 .personal-enter {
-  width: 121px;
+    width: 121px;
   height: 45px;
   font-size: 21px;
   line-height: 1;
@@ -205,6 +270,7 @@ search:focus .icon-top {
 .registration {
   width: 150px;
   height: 45px;
+  margin-left: 10px;
   font-size: 21px;
   color: #000000;
   background-color: #ffffff;
@@ -221,22 +287,35 @@ search:focus .icon-top {
 }
 
 .navigation {
-  /*width: 1200px;
-  height: 120px;*/
-  background-color: #f4f7f9;
+  margin-top: 96px;
 }
+
+
 .navigation-list {
-  width: 940px;
-  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+
+
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
-  line-height: 1;
-  color: #ffffff;
 }
 
+.navigation-list li{
+  height: 60px;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  flex-grow: 1;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
 
+}
+/* по стайлгайду цвет меняется но задан один */
 .navigation-list li:hover {
   box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+
 }
 
 .navigation-list li:active {
@@ -250,12 +329,35 @@ search:focus .icon-top {
   color: #000000;
 }
 
-.asbout-us p,
+.about-us {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.slogan {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main-contacts {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-us p,
 .main-contacts p {
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.85;
-    color: #000000;
+  color: #000000;
 }
 
 .carriers {
@@ -268,15 +370,13 @@ search:focus .icon-top {
   color: #ee3643;
   content: "-";
 }
-/* размеры дефиса перед названиями компаний - не знаю как ставить .indicator {
-  width: 25px;
-  height: 2px;
-  background-color: #ee3643;
-}*/
+
 
 .slogan a,
 .write-us {
   height: 38px;
+  margin-top: 20px;
+  padding-top: 10px;
   background-color: #ee3643;
   font-size: 14px;
   text-align: center;
@@ -287,9 +387,10 @@ search:focus .icon-top {
   width: 220px;
 }
 
-.write-us {
+.main-contacts a.write-us {
   width: 300px;
 }
+
 .modal-write-us button {
 background-color: #ee3643;
 color: #ffffff;
@@ -297,7 +398,7 @@ color: #ffffff;
 
 .modal-write-us input,
 .modal-write-us textarea {
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   color: #a9a9a9;
@@ -307,44 +408,68 @@ color: #ffffff;
   background-color: #32425c;
 }
 
+.footer-top-row .container {
+  display: flex;
+}
+
 .footer-top-row .logo-footer {
   width: 220px;
   height: 68px;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   text-align: center;
-  }
+}
 
-  .footer-navigation-list a{
-    font-size: 18px;
-    line-height: 1.33;
-    color: #f1f5f7;
-  }
+.footer-navigation {
+  margin-left: 69px;
+  flex-grow: 1;
+}
 
-  .footer-navigation-list a:hover,
-  .footer-catalog-list a:hover{
-    text-decoration: underline;
-  }
+.footer-navigation-list{
+  display: flex;
+  justify-content: space-between;
+}
 
-  .footer-navigation-list a:active,
-  .footer-catalog-list a:active {
-    text-decoration: none;
-    opacity: 0.5;
-  }
+.footer-navigation-list a{
+  font-size: 18px;
+  line-height: 1.33;
+  color: #f1f5f7;
+}
 
+.footer-navigation-list a:hover,
+.footer-catalog-list a:hover{
+  text-decoration: underline;
+}
+
+.footer-navigation-list a:active,
+.footer-catalog-list a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
 
 .footer-middle-row {
-  /*
-  width: 1200px;
+   /* width: 1200px;
   height: 113px;  */
   background-color: #32425c;
 }
 
+.footer-middle-row .container {
+  display: flex;
+}
+
 .footer-adress {
+  width: 315px;
   font-size: 18px;
   line-height: 1.33;
   color: #f3f7f9;
 }
+
+.footer-catalog-list{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
 .footer-catalog-list a {
   font-size: 18px;
   line-height: 1.33;
@@ -357,6 +482,11 @@ color: #ffffff;
   height: 107px; */
   background-color: #293449;
 }
+.footer-bottom-row .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .button {
   font: inherit;
@@ -369,6 +499,7 @@ color: #ffffff;
 }
 
 .copyright {
+  width: 228px;
   font-family: Cuprum;
   font-size: 16px;
   line-height: 1.13;
@@ -376,14 +507,23 @@ color: #ffffff;
   text-align: left;
   color: #ffffff;
 }
+.social {
+  display: flex;
+  margin-left: 100px;
+
+}
 
 .social-item {
   width: 42px;
   height: 42px;
+  display: inline-block;
   border-radius: 50%;
   background-color: #212a3a;
+  /* лишнее?!
   background-clip: padding-box;
-  background-origin: border-box;
+  background-origin: border-box; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .social-item:hover,
@@ -391,8 +531,34 @@ color: #ffffff;
   background-color: #ee3643;
 }
 
-p.feedback,
-p.developer {
+.icon-vk {
+  background-image: url('../img/icon-vk.svg');
+  background-size: 26px 15px;
+}
+
+.icon-fb {
+  background-image: url('../img/icon-fb.svg');
+  background-size: 12px 22px;
+}
+
+.icon-insta {
+  background-image: url('../img/icon-insta.svg');
+  background-size: 21px 21px;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback p,
+.developer p{
+  margin: 0;
   font-size: 16px;
   line-height: 1.13;
   color: #ffffff;
@@ -420,19 +586,25 @@ p.developer {
 /* catalog.css */
 
 .user-area {
+  display: flex;
+  flex-direction: column;
   height: 45px;
+  flex-grow: 1;
+
   background-color: #ffffff
 }
+.user-opportunities {
+  display: flex;
+}
 
-.user-area span {
+.personal-box a {
   color: #000000;
   font-size: 21px;
   text-align: left;
-  color: #000000;
   background-color: #ffffff;
 }
 
-.user-area:active span {
+.personal-box a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -445,26 +617,30 @@ p.developer {
   opacity: 0.3;
 }
 
-.personal-data-list a {
+.personal-data a {
   text-decoration: underline;
   font-size: 16px;
   color: #32425c;
 }
 
-.personal-data-list a:hover {
+.personal-data a:hover {
   color: #ee3643;
+  border-bottom-color: #ee3643;
 }
 
-.personal-data-list a:active {
+.personal-data a:active {
+  border-bottom-color: rgba(0, 0, 0, .3);
   color: #000000;
   opacity: 0.3;
 }
 
 .breadcrumbs {
-  font-family: PTSans;
+  display: flex;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   color: #000000;
+
 }
 .breadcrumbs a {
   color: #000000;
@@ -480,11 +656,19 @@ p.developer {
   text-align: left;
   color: #32425c;
 }
+.filters-catalog {
+  display: flex;
+}
+
+.filters {
+  width: 220px;
+}
+
 .filters h2 {
 
   height: 38px;
   background-color: #f7f3ec;
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   font-weight: normal;
@@ -495,7 +679,7 @@ p.developer {
 }
 
 .legend {
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
 
@@ -508,7 +692,7 @@ p.developer {
 
 .filer-option {
   text-transform: uppercase;
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
 }
 
@@ -517,8 +701,13 @@ p.developer {
   height: 51px;
 }
 
+.catalog-list {
+display: flex;
+flex-wrap: wrap;
+}
+
 .catalog-item {
-  width: 220px;
+  width: 218px;
  /* height: 318px; */
   border: solid 1px #e5e5e5;
   background-color: #ffffff;
@@ -531,7 +720,7 @@ p.developer {
 .catalog-item h3 {
   text-transform: none;
     height: 33px;
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.11;
@@ -543,7 +732,7 @@ p.developer {
   width: 148px;
   height: 38px;
   text-decoration: line-through;
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
@@ -553,11 +742,11 @@ p.developer {
 .new-prise {
   width: 148px;
   height: 38px;
-  font-family: PTSans;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
-  background-image: url("img/item-button.svg");
+  background-image: url("../img/item-button.svg");
   /* почему фоном нет картинки ? */
     color: green;
 }
@@ -571,7 +760,7 @@ p.developer {
 }
 
 .item-bookmark {
-  cwidth: 135px;
+  width: 135px;
   height: 38px;
   border: solid 3px #63a63e;
 }
@@ -596,4 +785,52 @@ p.developer {
 .item-bookmark:active {
   border: solid 3px #32425c;
   color: rgba(50, 66, 92, 0.3);
+}
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  margin-left: 220px;
+
+}
+
+.pagination-item a {
+  width: 38px;
+  height: 38px;
+  border: solid 1px #e5e5e5;
+  background-color: #ffffff;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: center;
+  color: #000000;
+}
+
+.pagination-item a:hover{
+  border: solid 1px #bdc6ca;
+}
+
+.pagination-item a:active {
+  border: solid 1px #ee3643;
+}
+
+.pagination-item-current a,
+.pagination-item-current a:active,
+.pagination-item-current a:hover {
+  color: #ffffff;
+  background-color: #ee3643;
+  border: none;
+}
+
+.pagination-next a {
+  width: 140px;
+  height: 38px;
+}
+
+.pagination-next a:hover {
+  border: solid 1px #bdc6ca;
+}
+
+.pagination-next a:active {
+  border: solid 1px #ee3643;
 }
