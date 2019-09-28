@@ -1,18 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+
 body {
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-size: 17px;
   line-height: 18px;
   font-weight: normal;
   color: #000000;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 1200px;
-
 }
 
 a {
@@ -20,14 +20,24 @@ a {
   color:#ffffff;
 }
 
+/*  это глобальный тег? надо менять? */
 h1,
 h2,
 h3 {
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
-ul {
+.list-none {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.full-ref {
+  display: block;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -48,9 +58,9 @@ ul {
 }
 
 .container {
-width: 940px;
-margin: 0 auto;
-padding: 0 0;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .header-top-row {
@@ -61,18 +71,18 @@ padding: 0 0;
 }
 
 .header-top-row .container {
-display: flex;
+  display: flex;
+  justify-content: space-between;
 
 }
 
-.header-top-row:hover {
+/* .header-top-row:hover {
   background-color: #212a3a;
-}
+}*/
 
 .logo {
   width: 220px;
   height: 47px;
-
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   text-align: center;
@@ -85,12 +95,13 @@ display: flex;
 .logo:active {
   background-color: #ba2732;
 }
-
-.search {
-  /*width: 270px;*/
-flex-grow: 1;
- }
-
+/* иначе при наведение увеличивалось высота */
+.search,
+.bookmarkers,
+.order
+ {
+  height: 42px;
+}
 
 .search button {
   order: 0;
@@ -156,14 +167,6 @@ input:focus + button > svg {
   background-color: #ffffff;
   fill: #ee3643;
   opacity: 1;
-}
-
-.bookmarkers {
-flex-grow: 1;
-}
-
-.order {
-  flex-grow: 1;
 }
 
 .bookmarkers:hover,
@@ -287,7 +290,7 @@ flex-grow: 1;
 }
 
 .navigation {
-  margin-top: 96px;
+  margin-bottom: 50px;
 }
 
 
@@ -295,7 +298,8 @@ flex-grow: 1;
   margin: 0 auto;
   padding: 0;
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
@@ -306,7 +310,7 @@ flex-grow: 1;
   line-height: 1;
   color: #ffffff;
   text-align: center;
-  flex-grow: 1;
+
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 
@@ -330,9 +334,9 @@ flex-grow: 1;
 }
 
 .about-us {
-  margin-top: 40px;
   margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 
@@ -364,18 +368,28 @@ flex-grow: 1;
   font-size: 18px;
 }
 /* пытаюсь вставить дефис перед названиями компаний */
+.carriers li {
+  position: relative;
+  padding-left: 30px;
+}
+
+
 .carriers li:before {
-  width: 250px;
+  position: absolute;
+  left: 0px;
+  top:0px;
+
+  width: 25px;
   height: 2px;
   color: #ee3643;
-  content: "-";
+  content: " ";
 }
 
 
 .slogan a,
 .write-us {
   height: 38px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 10px;
   background-color: #ee3643;
   font-size: 14px;
@@ -385,10 +399,12 @@ flex-grow: 1;
 
 .slogan a {
   width: 220px;
+  margin-top:auto;
 }
 
 .main-contacts a.write-us {
   width: 300px;
+  margin-top:auto;
 }
 
 .modal-write-us button {
@@ -427,6 +443,7 @@ color: #ffffff;
 
 .footer-navigation-list{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -455,6 +472,8 @@ color: #ffffff;
 
 .footer-middle-row .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-adress {
@@ -650,6 +669,7 @@ color: #ffffff;
 .inner-page h1 {
   width: 940px;
   height: 89px;
+  margin-bottom: 20px;
   background-color: #f2f6f8;
   font-family: Cuprum;
   font-size: 30px;
@@ -701,55 +721,125 @@ color: #ffffff;
   height: 51px;
 }
 
+.catalog {
+margin-left: 20px;
+margin-bottom: 20px;
+
+}
+
 .catalog-list {
+width: 700px;
 display: flex;
 flex-wrap: wrap;
+justify-content: space-between;
 }
 
 .catalog-item {
+  position: relative;
+  display: inline-block;
   width: 218px;
  /* height: 318px; */
-  border: solid 1px #e5e5e5;
-  background-color: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #e5e5e5;
 }
 
-.catalog-item-img{
-  width: 218px;
-  height: 170px
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
 }
-.catalog-item h3 {
-  text-transform: none;
-    height: 33px;
+/* для обнуления пробелов после строчного блочного элемента но не работае */
+.catalog-list {
+  font-size: 0;
+}
+
+.catalog-item {
+  font-size: 16px;
+}
+
+.catalog-item .product-new {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
+  background: url("../img/new-flag.png") no-repeat 0 0;
+}
+
+
+.catalog-img img{
+  max-width: 100%;
+
+}
+
+.catalog-item .title {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  line-height: 1.11;
-  text-align: center;
-  color: #000000
+  line-height: 20px;
 }
 
-.old-prise {
-  width: 148px;
-  height: 38px;
-  text-decoration: line-through;
+.catalog-item .old-prise {
+
+  min-height: 38px;
+  margin: 10 auto;
+  margin-top: 15px;
+  padding: 10px 30px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
-  text-align: center;
+
   color: #999999;
+  text-decoration: line-through;
 }
 
-.new-prise {
-  width: 148px;
+.catalog-item .new-prise {
+  width: 141px;
   height: 38px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+
+  color: white;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
-  text-align: center;
+
   background-image: url("../img/item-button.svg");
-  /* почему фоном нет картинки ? */
-    color: green;
 }
+
+
+.catalog-item .hidden {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 218px;
+  height: 170px;
+  padding: 40px 0;
+
+  background-color:#ffffff;
+
+  z-index: 10;
+}
+
+
+.catalog-item:hover .hidden {
+  display: block;
+}
+/* нарисовать тень .catalog-item:hover {
+box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+} */
 
 .item-buy {
   width: 135px;
@@ -789,12 +879,12 @@ flex-wrap: wrap;
 
 .pagination-list {
   display: flex;
-  list-style: none;
   margin-left: 220px;
 
 }
 
 .pagination-item a {
+  display: block;
   width: 38px;
   height: 38px;
   border: solid 1px #e5e5e5;
@@ -803,6 +893,8 @@ flex-wrap: wrap;
   font-size: 13px;
   line-height: 1.38;
   text-align: center;
+  vertical-align: middle; /* почему не работает? */
+
   color: #000000;
 }
 
