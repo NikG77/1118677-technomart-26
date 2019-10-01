@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <title>Каталог "Техномарт"</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
-    rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Интернет магазин "Техномарт"</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
 
 <body>
   <header class="page-header">
     <div class="header-top-row">
       <div class="container">
-        <div class="logo">
-          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт">
-        </div>
+        <div class="logo"></div>
         <div class="search">
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="search-box" placeholder="Поиск:">
@@ -29,54 +25,43 @@
           </form>
         </div>
         <div class="bookmarkers">
-          <img src="img/icon-bookmark.svg" class="icon-top" width="14" height="16" alt="Иконка закладки">
-          <a href="bookmarkers.html">Закладки: 0</a>
-        </div>
-        <div class="order">
-          <img src="img/icon-cart.svg" class="icon-top" width="15" height="15" alt="Иконка корзинки">
-          <a href="order.html">Корзина: 0</a>
-        </div>
-        <div class="buy">
-          <a href="buy.html">Оформить заказ</a>
+            <a class="full-ref" href="#">Закладки: 0</a>
+          </div>
+          <div class="order">
+            <a class="full-ref" href="#" alt=" ">Корзина: 10</a>
+          </div>
+          <div class="buy">
+            <a class="full-ref" href="#" alt=" ">Оформить заказ</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="header-middle-row">
-      <div class="container">
-        <p class="page-title">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
-        <div class="header-contacts">
-          <div class="contacts-tel">
-            <img src="img/icon-phone.svg" class="icon" width="19" height="19" alt="Иконка телефона">
-            <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+
+      <div class="header-middle-row">
+        <div class="container">
+          <p class="page-title">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
+          <div class="header-contacts">
+            <a class="tel" href="tel:+78125550555" alt="Иконка телефона">+7 (812) 555-05-55</a>
+            <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
         <div class="user-area">
-          <div class="user-opportunities">
-            <div class="personal-box">
-              <img src="img/icon-user.svg" width="20" height="18" alt="Иконка пользователя">
-              <a href="#" aria-label="перейти в свой профиль">Равшан Джамшутович</a>
-            </div>
-            <div class="personal-exit">
-              <a href="#"><span class="visually-hidden">Выход</span></a>
-              <img src="img/icon-logout.svg" width="20" height="17" alt="Выход">
-            </div>
-          </div>
-          <div class="personal-data">
-            <a class="my-orders" href="#">Мои заказы</a>
-            <a class="my-cabinet" href="#">Личный кабинет</a>
+          <a class="personal-box" href="#" aria-label="перейти в свой профиль">Равшан Джамшутович</a>
+          <a class="personal-exit" href="#"><span class="visually-hidden">Выход</span></a>
+        <div class="personal-data">
+          <a class="my-orders" href="#">Мои заказы</a>
+          <a class="my-cabinet" href="#">Личный кабинет</a>
           </div>
         </div>
       </div>
-      <nav class="navigation">
+
+     <nav class="navigation">
         <ul class="navigation-list container list-none">
-          <li class="active"> <a>Главная</a></li>
-          <li><a href="company.html">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="special-offers.html">Спецпредложения</a></li>
-          <li><a href="delavery.html">Доставка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li class="active"> <a class="full-ref">Главная</a></li>
+          <li><a class="full-ref" href="#">Компания</a></li>
+          <li><a class="full-ref" href="catalog.html">Каталог</a></li>
+          <li><a class="full-ref" href="#">Новости</a></li>
+          <li><a class="full-ref" href="#">Спецпредложения</a></li>
+          <li><a class="full-ref" href="#">Доставка</a></li>
+          <li><a class="full-ref" href="#">Контакты</a></li>
         </ul>
       </nav>
   </header>
@@ -334,13 +319,18 @@
     </div>
   </footer>
 
-  <section class="add-to-order">
-    <a href="catalog.html"><img src="img/modal-close.svg" width="21" height="21" alt="Иконка закрыть окно"></a>
-    <img src="img/modal-check.svg" width="66" height="66" alt="Иконка товар добавлен в корзину">
-    <h3>Товар добавлен в корзину!</h3>
-      <a href="order.html">Оформить заказ</a>
-      <a href="catalog.html">Продолжить покупки</a>
-  </section>
+  <section class="modal modal-buy">
+    <p class="modal-buy-desription" >Товар добавлен в корзину!</p>
+    <div class="modal-buy-bt">
+      <a class="modal-bt-order" href="order.html">Оформить заказ</a>
+      <a class="modal-bt-continue" href="catalog.html">Продолжить покупки</a>
+    </div>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
 </body>
 
 </html>
+
+
