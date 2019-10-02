@@ -68,11 +68,13 @@ h3 {
   height: 42px;
   background-color: #293449;
   color: #ffffff;
+  margin-bottom: 60px;
 }
 
 .header-top-row .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* .header-top-row:hover {
@@ -212,8 +214,9 @@ border: 1px solid #ee3643; /* для подсветки */
 .order a:hover {
   background-color: #212a3a;
  }
- .bookmarkers a:hover::before,
- .order a:hover::before{
+
+.bookmarkers a:hover::before,
+.order a:hover::before{
    opacity: 1;
  }
 
@@ -235,6 +238,7 @@ border: 1px solid #ee3643; /* для подсветки */
 .buy a{
   width: 150px;
   height: 42px;
+
   line-height: 42px;
   padding-left: 20px;
   background-color: #63a63e;
@@ -250,7 +254,6 @@ border: 1px solid #ee3643; /* для подсветки */
 }
 
 .header-middle-row {
-  margin-top: 60px;
   min-height: 60px;
   background-color: #f4f7f9;
 }
@@ -303,7 +306,7 @@ p.header-adress {
 
 .user-login {
   display: flex;
-  margin-left: 69px;
+  margin-left: auto;
 }
 
 .personal-enter a {
@@ -382,8 +385,9 @@ p.header-adress {
 }
 /* по стайлгайду цвет меняется но задан один */
 .navigation-list li a:hover {
-  box-shadow: inset 0px -5px 0 0 #293449;
-  background-color: #32425c;
+  background-color:green;
+  /*box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;*/
 }
 
 .navigation-list li a:active {
@@ -463,12 +467,12 @@ p.header-adress {
 
 .slogan a {
   width: 220px;
-  margin-top:auto;
+
 }
 
 .main-contacts a.write-us {
   width: 300px;
-  margin-top:auto;
+
 }
 
 
@@ -659,7 +663,7 @@ p.header-adress {
 .user-area {
   display: flex;
   flex-wrap: wrap;
-  margin:0;
+  margin-left: auto;
   min-height: 45px;
   width: 299px;
   background-color: #ffffff
@@ -798,6 +802,8 @@ a.my-cabinet:active::before {
 }
 .filters-catalog {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .filters {
@@ -842,13 +848,14 @@ a.my-cabinet:active::before {
 }
 
 .catalog {
-margin-left: 20px;
+width: 700px;
+
 margin-bottom: 20px;
 
 }
 
 .catalog-list {
-width: 700px;
+
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
@@ -856,11 +863,14 @@ justify-content: space-between;
 
 .catalog-item {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 218px;
  /* height: 318px; */
   margin-right: 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
   line-height: 20px;
   font-weight: bold;
   text-align: center;
@@ -894,13 +904,12 @@ justify-content: space-between;
 
 .catalog-img img{
   max-width: 100%;
-
+  margin-bottom: 10px;
 }
 
 .catalog-item .title {
   min-height: 40px;
   padding: 0 25px;
-  margin-top: 10px;
   margin-bottom: 15px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
@@ -909,15 +918,13 @@ justify-content: space-between;
 }
 
 .catalog-item .old-prise {
-
   min-height: 38px;
   margin: 10 auto;
-  margin-top: 15px;
   padding: 10px 30px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
-
+margin-top: auto;
   color: #999999;
   text-decoration: line-through;
 }
@@ -925,8 +932,6 @@ justify-content: space-between;
 .catalog-item .new-prise {
   width: 141px;
   height: 38px;
-  margin: 10px auto;
-  margin-bottom: 20px;
   padding: 10px 30px;
 
   color: white;
@@ -967,23 +972,27 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   box-shadow: inset 0px -3px 0 0 #367315;
   background-color: #63a63e;
   color: #ffffff;
+  margin-bottom: 7px;
+  border: none;
 }
 
 .item-bookmark {
   width: 135px;
   height: 38px;
   border: solid 3px #63a63e;
+  background-color: transparent;
 }
 
 .item-buy:hover {
-  border: solid 3px #5fbb2d;
-  border-bottom-color: #367315;
+  /*border: solid 3px #5fbb2d;
+  border-bottom-color: #367315;*/
   background: #5fbb2d;
+  box-shadow: inset 0px -3px 0 0 #367315;
 }
 
 .item-buy:active {
-  border: solid 3px #518534;
-  border-bottom-color: #518534;
+  /*border: solid 3px #518534;
+  border-bottom-color: #518534;*/
   background: #518534;
 }
 
@@ -1056,15 +1065,13 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .modal-write {
-  /*display: none;*/
+  display: none;
   width: 620px;
+  /*height: 430px;*/
   top: 50%;
   left: 50%;
-  margin-top: 200px;
-  margin-left: -360px;
-
+  transform: translate(-50%, +50%);
   padding-bottom: 55px;
-  /*height: 430px;*/
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border-top: 7px solid red;
 }
@@ -1154,42 +1161,44 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   width: 460px;
   height: 114px;
 }
-
+.modal-write p {
+  margin: 0;
+}
 
 .modal-map {
-  /* display: none;*/
+  display: none;
+  width: 940px;
+  height: 446px;
   top: 50%;
   left: 50%;
-
-  width: 940px;
-  height: 446;
-
-  margin-top: -225px;
-  margin-left: -470px;
+  transform: translate(-50%, -50%);
 }
 
 .modal-map p {
   margin: 0;
 }
 
+.modal-buy p {
+  margin: 0;
+}
+
 .modal-buy {
-  /* display: none;*/
+  display: none;
+  width: 620px;
+  min-height: 282px;
   top: 50%;
   left: 50%;
-
-  width: 620px;
-  /*height: 282px;*/
+  transform: translate(-50%, -50%);
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
   border-top: 7px solid red;
-
-  margin-top: 0px;
-  margin-left: -310px;
+  padding-top: 75px;
 }
 
 .modal-buy-desription {
   position: relative;
-  margin: 70px 0;
-    margin-left: 179px;
+
+  padding-left: 180px;
+  padding-bottom: 75px;
   font-family: Cuprum;
   font-size: 30px;
   color: #000000;
@@ -1201,7 +1210,7 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   background-image: url("../img/modal-check.svg");
   width: 66px;
   height: 66px;
-  left: -98px;
+  left: 81px;
   top: -32px
 }
 
