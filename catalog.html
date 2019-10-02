@@ -66,17 +66,19 @@
       </nav>
   </header>
 
+
+
   <main class="inner-page container">
     <ul class="breadcrumbs list-none">
       <li class="home">
-        <a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Главная"></a>
+        <a class="breadcrumbs__item" href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Перейти на главнаю"></a>
       </li>
-      <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Cтрелка вправо"></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Cтрелка вправо"></li>
-      <li><a href="tool.html">Инструмент</a></li>
-      <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Cтрелка вправо"></li>
-      <li class="active"><a>Перфораторы</a></li>
+
+      <li><a class="breadcrumbs__item" href="catalog.html">Каталог</a></li>
+
+      <li><a class="breadcrumbs__item" href="tool.html">Инструмент</a></li>
+
+      <li class="active">Перфораторы</li>
     </ul>
     <h1>Перфораторы</h1>
     <div class="filters-catalog">
@@ -89,29 +91,29 @@
             </legend>
             <ul class="filter-producer list-none">
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch"
+                <input class="filter-checkbox" type="checkbox" name="bosch" id="filter-bosch"
                   checked>
-                <label for="filter-bosch">Bosch</label>
+                <label class="checkbox-new" for="filter-bosch">Bosch</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol"
+                <input class="filter-checkbox" type="checkbox" name="interskol"
                   id="filter-interskol">
-                <label for="filter-interskol">Интерскол</label>
+                <label class="checkbox-new" for="filter-interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita"
+                <input class="filter-checkbox" type="checkbox" name="makita" id="filter-makita"
                   checked>
-                <label for="filter-makita">Makita</label>
+                <label class="checkbox-new" for="filter-makita">Makita</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="malin-dewalt"
+                <input class="filter-checkbox" type="checkbox" name="malin-dewalt"
                   id="filter-dewalt">
-                <label for="filter-dewalt">Dewalt</label>
-                Malin+Goetz
+                <label class="checkbox-new" for="filter-dewalt">Dewalt</label>
+
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
-                <label for="filter-hitachi">Hitachi</label>
+                <input class="filter-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+                <label class="checkbox-new" for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
@@ -121,14 +123,14 @@
             </legend>
             <ul class="filter-type list-none">
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" name="power-type" value="battery"
+                <input class="filter-radio" type="radio" name="power-type" value="battery"
                   id="filter-battery" checked>
-                <label for="filter-battery">Аккумуляторные</label>
+                <label class="radio-new" for="filter-battery">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" name="power-type" value="mains"
+                <input class="filter-radio" type="radio" name="power-type" value="mains"
                   id="filter-mains">
-                <label for="filter-mains">Сетевое</label>
+                <label class="radio-new" for="filter-mains">Сетевое</label>
               </li>
             </ul>
           </fieldset>

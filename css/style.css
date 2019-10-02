@@ -777,29 +777,54 @@ a.my-cabinet:active::before {
   opacity: 1;
 }
 
+
+
+
 .breadcrumbs {
   display: flex;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 22px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
-  color: #000000;
+}
 
-}
-.breadcrumbs a {
+.breadcrumbs__item,
+.breadcrumbs__item:visited,
+.breadcrumbs__item:active {
   color: #000000;
-  text-transform: uppercase;
 }
+
+.breadcrumbs__item {
+  margin-right: 40px;
+  position: relative;
+}
+
+.breadcrumbs__item:after {
+  content: ">";
+  position: absolute;
+  right: -22px;
+  top: 0;
+  color: #c5c9d1;
+}
+
+
 
 .inner-page h1 {
-  width: 940px;
-  height: 89px;
+  width: 100%;
+  min-height: 89px;
   margin-bottom: 20px;
+  padding-left: 30px;
+  padding-top: 32px;
   background-color: #f2f6f8;
   font-family: Cuprum;
   font-size: 30px;
-  text-align: left;
   color: #32425c;
 }
+
+
 .filters-catalog {
   display: flex;
   flex-wrap: wrap;
@@ -808,45 +833,129 @@ a.my-cabinet:active::before {
 
 .filters {
   width: 220px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .filters h2 {
-
+  padding-left: 18px;
+  padding-top: 14px;
   height: 38px;
   background-color: #f7f3ec;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   font-weight: normal;
+  margin-bottom: 20px;
 }
+
+/* чекбокс и радио фильтры*/
 
 .filter fieldset {
   border: none;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
-.legend {
+.filter legend {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
-
+  text-transform: uppercase;
+  padding-top: 24px;
+  border-top: 1px solid #f7f3ec;
+  width: 220px;
+  margin: 0;
 }
 
 .filter-producer {
-  width: 81px;
-  height: 171px;
+
+  /*height: 171px; */
 }
 
-.filer-option {
+.filter-option {
   text-transform: uppercase;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
+  padding-top: 23px;
+  padding-left: 35px;
+
+
 }
 
 .filter-type {
-  width: 130px;
-  height: 51px;
+
+  /* height: 51px; */
 }
 
+  label.checkbox-new {
+  position: relative;
+  cursor: pointer;
+
+}
+
+  label.checkbox-new::before {
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  z-index: 1;
+  width: 23px;
+  height: 23px;
+  content: "";
+  background-image: url("../img/checkbox-off.svg");
+  /*  для разнообразия */
+  transition-timing-function: ease;
+  transition-duration: 0,5s;
+}
+
+  input.filter-checkbox[type="checkbox"] {
+  display: none;
+}
+
+input.filter-checkbox[type="checkbox"]:checked ~ label.checkbox-new::before{
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+label.checkbox-new,
+label.radio-new {
+  position: relative;
+  cursor: pointer;
+
+}
+/* радио перключатели */
+
+  label.radio-new::before {
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  content: "";
+  background-image: url("../img/radio-off.svg");
+  /*  для разнообразия */
+  transition-timing-function: ease;
+  transition-duration: 0,5s;
+}
+
+  input.filter-radio[type="radio"] {
+  display: none;
+}
+
+input.filter-radio[type="radio"]:checked ~ label.radio-new::before{
+   background-image: url("../img/radio-on.svg");
+}
+
+
+
+
+
+/* */
 .catalog {
 width: 700px;
 
