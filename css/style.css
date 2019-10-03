@@ -1098,17 +1098,19 @@ input.visually-hidden[type="radio"]:checked ~ label.radio-new::before{
 
 }
 
-.sorting-item {
+.sorting-item a{
   padding-top: 12px;
+  display: inline-block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.38;
   color: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dotted #ee3643;;
+    border-bottom: 1px dotted #ee3643;;
   text-transform: uppercase;
+
 }
 
-.sorting-active {
+.sorting-active a{
   border: none;
   color: #ee3643;
 
