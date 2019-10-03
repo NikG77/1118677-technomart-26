@@ -55,6 +55,7 @@ h3 {
 .main-header,
 .page-header {
   background-color: #f4f7f9;
+  min-height: 320px;
 }
 
 .container {
@@ -75,11 +76,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
 
-/* .header-top-row:hover {
-  background-color: #212a3a;
-}*/
+}
 
 .logo {
   width: 220px;
@@ -107,12 +105,14 @@ h3 {
   height: 42px;
 }
 
-.seach{
-  width: 270px;
+.search {
+  min-width: 270px;
+  flex-grow: 1;
 }
 .search button {
+
   order: 0;
-  }
+}
 
 .icon-top {
   opacity: 0.3;
@@ -147,8 +147,6 @@ input[type="search"]:hover {
 input[type="search"]:focus {
   background-color: #ffffff;
   color: #000000;
-/* не смог в фокусе печатолось в placeholder слово Перфоратор"
-  input[placeholder]: "Перфоратор"; */
 }
 
 
@@ -166,9 +164,10 @@ button.icon-search > svg {
 button.icon-search:hover > svg {
   opacity: 1;
 }
+
 input:focus + button > {
   background-color: #ffffff;
-  }
+}
 
 input:focus + button > svg {
   background-color: #ffffff;
@@ -178,14 +177,12 @@ input:focus + button > svg {
 
 .bookmarkers a,
 .order a {
-width: 135px;
-padding-left: 15px;
-display: inline-block;
-position: relative;
-text-align: center;
-line-height: 42px;
-
-border: 1px solid #ee3643; /* для подсветки */
+  width: 135px;
+  padding-left: 15px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 42px;
 }
 
 .bookmarkers a::before {
@@ -256,15 +253,20 @@ border: 1px solid #ee3643; /* для подсветки */
 .header-middle-row {
   min-height: 60px;
   background-color: #f4f7f9;
+  margin-bottom: 43px;
 }
 
 .header-middle-row .container {
   display: flex;
+  min-height: 60px;
+  align-items: center;
 }
 
 .page-title {
-  margin-left:30px;
-  width: 196px;
+  margin: 0;
+  padding: 0;
+  margin-left:53px;
+  width: 195px;
   font-size: 16px;
   font-style: italic;
   line-height: 1.44;
@@ -273,17 +275,21 @@ border: 1px solid #ee3643; /* для подсветки */
 
 .header-contacts {
   width: 270px;
-  height: 45px;
-  border: solid 3px #ffffff;
-  margin-left: 67px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left:71px;
 }
 
 .header-contacts a {
-  display: inline-block;
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 5px;
+  padding: 13px 0;
   padding-left:74px;
-  padding-top: 10px;
 
-  height: 21px;
+  border: solid 3px #ffffff;
+  /*height: 21px;*/
   position: relative;
   font-size: 21px;
   color: #ee3643;
@@ -302,7 +308,7 @@ p.header-adress {
   font-size: 14px;
   line-height: 1.71;
   color: #32425c;
-}
+ }
 
 .user-login {
   display: flex;
@@ -374,25 +380,22 @@ p.header-adress {
 }
 
 .navigation-list li a {
-  height: 60px;
   line-height: 1;
   color: #ffffff;
-  text-align: center;
-  padding:15px 30px;
+
+  padding:15px 29px;
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 
 }
-/* по стайлгайду цвет меняется но задан один */
+
 .navigation-list li a:hover {
-  background-color:green;
-  /*box-shadow: inset 0px -5px 0 0 #293449;
-  background-color: #32425c;*/
+  background-color:#1d2739;
 }
 
 .navigation-list li a:active {
   background-color: #1d2739;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -778,7 +781,19 @@ a.my-cabinet:active::before {
 }
 
 
+/* catalog.html  */
 
+.inner-page h1 {
+  width: 100%;
+  min-height: 89px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-top: 32px;
+  background-color: #f2f6f8;
+  font-family: Cuprum;
+  font-size: 30px;
+  color: #32425c;
+}
 
 .breadcrumbs {
   display: flex;
@@ -811,20 +826,6 @@ a.my-cabinet:active::before {
 }
 
 
-
-.inner-page h1 {
-  width: 100%;
-  min-height: 89px;
-  margin-bottom: 20px;
-  padding-left: 30px;
-  padding-top: 32px;
-  background-color: #f2f6f8;
-  font-family: Cuprum;
-  font-size: 30px;
-  color: #32425c;
-}
-
-
 .filters-catalog {
   display: flex;
   flex-wrap: wrap;
@@ -835,10 +836,9 @@ a.my-cabinet:active::before {
   width: 220px;
   display: flex;
   flex-direction: column;
-
 }
 
-.filters h2 {
+.filters-title {
   padding-left: 18px;
   padding-top: 14px;
   height: 38px;
@@ -850,11 +850,112 @@ a.my-cabinet:active::before {
   margin-bottom: 20px;
 }
 
+/* фильтр цены */
+/* первый строчку удалить*/
+
+.filter-price-item{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.filter-price-item legend {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 30px;
+
+}
+
+.range-controls {
+  position: relative;
+
+  height: 80px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f7f3ec;;
+
+  border-radius: 3px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+/* управление шириной прогресс бара  */
+.range-controls .bar {
+  width: 83.3%;
+  height: 2px;
+  margin-left: 0%;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 20px;
+  height:22px;
+  background-image: url("..//img/filter-button.svg");
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.price-controls input {
+  width: 95px;
+  height: 38px;
+  padding: 8px 10px;
+
+
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+
+  line-height: 1.18;
+    text-align: center;
+  color: #000000;
+
+
+  border: none;
+  border-radius: 3px;
+  background: #f7f3ec;
+}
+
+.max-price {
+  text-align: right;
+}
+
+
+
+
 /* чекбокс и радио фильтры*/
 
 .filter fieldset {
   border: none;
-
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
@@ -863,17 +964,11 @@ a.my-cabinet:active::before {
 .filter legend {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
+  line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 24px;
   border-top: 1px solid #f7f3ec;
-  width: 220px;
-  margin: 0;
-}
-
-.filter-producer {
-
-  /*height: 171px; */
 }
 
 .filter-option {
@@ -882,8 +977,6 @@ a.my-cabinet:active::before {
   font-size: 15px;
   padding-top: 23px;
   padding-left: 35px;
-
-
 }
 
 .filter-type {
@@ -891,13 +984,7 @@ a.my-cabinet:active::before {
   /* height: 51px; */
 }
 
-  label.checkbox-new {
-  position: relative;
-  cursor: pointer;
-
-}
-
-  label.checkbox-new::before {
+label.checkbox-new::before {
   position: absolute;
   top: -2px;
   left: -35px;
@@ -911,11 +998,7 @@ a.my-cabinet:active::before {
   transition-duration: 0,5s;
 }
 
-  input.filter-checkbox[type="checkbox"] {
-  display: none;
-}
-
-input.filter-checkbox[type="checkbox"]:checked ~ label.checkbox-new::before{
+input.visually-hidden[type="checkbox"]:checked ~ label.checkbox-new::before{
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
@@ -925,11 +1008,9 @@ label.checkbox-new,
 label.radio-new {
   position: relative;
   cursor: pointer;
-
 }
-/* радио перключатели */
 
-  label.radio-new::before {
+label.radio-new::before {
   position: absolute;
   top: -2px;
   left: -35px;
@@ -938,33 +1019,104 @@ label.radio-new {
   height: 25px;
   content: "";
   background-image: url("../img/radio-off.svg");
-  /*  для разнообразия */
-  transition-timing-function: ease;
-  transition-duration: 0,5s;
 }
 
-  input.filter-radio[type="radio"] {
+input.filter-radio[type="radio"] {
   display: none;
 }
 
-input.filter-radio[type="radio"]:checked ~ label.radio-new::before{
+input.visually-hidden[type="radio"]:checked ~ label.radio-new::before{
    background-image: url("../img/radio-on.svg");
 }
 
+.filters-bt {
+  width: 140px;
+  height: 38px;
+  margin-top: 50px;
+  border: solid 1px #e5e5e5;
+  background-color: #ffffff;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #000000;
+  text-transform: uppercase;
+}
 
-
-
-
-/* */
 .catalog {
-width: 700px;
+  width: 700px;
+  margin-bottom: 20px;
+  }
 
-margin-bottom: 20px;
+.sorting {
+  width:100%;
+  min-height: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+}
+.sorting-title {
+  padding:0;
+  margin: 0;
+  padding-left: 19px;
+  padding-top: 13px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38;
+  color: #000000;
+  text-transform: uppercase;
+  position: relative;
 
 }
 
-.catalog-list {
+.sorting-title::before {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left:650px;
+  width: 11px;
+  height: 10px;
+  background-image: url("..//img/icon-up-dir.svg")
+}
+.sorting-title::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left:670px;
+  width: 11px;
+  height: 10px;
+  background-image: url("..//img/icon-down-dir.svg")
+}
 
+.sorting-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 139px;
+  width: 354px;
+  justify-content: space-between;
+
+}
+
+.sorting-item {
+  padding-top: 12px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #ee3643;;
+  text-transform: uppercase;
+}
+
+.sorting-active {
+  border: none;
+  color: #ee3643;
+
+}
+
+
+
+.catalog-list {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
@@ -990,7 +1142,7 @@ justify-content: space-between;
   margin-right: 0;
 }
 /* для обнуления пробелов после строчного блочного элемента но не работае */
-.catalog-list {
+.catalog {
   font-size: 0;
 }
 
@@ -1000,13 +1152,13 @@ justify-content: space-between;
 
 .catalog-item .product-new {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0px;
+  right: 0px;
   width: 60px;
   height: 60px;
   text-indent: -1000px;
   overflow: hidden;
-  z-index: 20;
+  z-index: 2;
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
@@ -1033,7 +1185,7 @@ justify-content: space-between;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
-margin-top: auto;
+  margin-top: auto;
   color: #999999;
   text-decoration: line-through;
 }
@@ -1057,16 +1209,10 @@ margin-top: auto;
   position: absolute;
   top: 0;
   left: 0;
-
-  width: 218px;
-  height: 170px;
   padding: 40px 0;
-
   background-color:#ffffff;
-
   z-index: 10;
 }
-
 
 .catalog-item:hover .hidden {
   display: block;
@@ -1103,6 +1249,7 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   /*border: solid 3px #518534;
   border-bottom-color: #518534;*/
   background: #518534;
+
 }
 
 .item-bookmark:hover {
@@ -1111,8 +1258,7 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .item-bookmark:active {
-  border: solid 3px #32425c;
-  color: rgba(50, 66, 92, 0.3);
+  opacity: 0.3;
 }
 
 .pagination-list {
