@@ -69,7 +69,7 @@ h3 {
   height: 42px;
   background-color: #293449;
   color: #ffffff;
-  margin-bottom: 60px;
+  margin-bottom: 46px;
 }
 
 .header-top-row .container {
@@ -259,17 +259,17 @@ input:focus + button > svg {
 .header-middle-row .container {
   display: flex;
   min-height: 60px;
-  align-items: center;
 }
 
 .page-title {
   margin: 0;
   padding: 0;
   margin-left:53px;
-  width: 195px;
+  padding-top: 8px;
+  width: 197px;
   font-size: 16px;
   font-style: italic;
-  line-height: 1.44;
+  line-height: 23px;
   color: #ee3643;
 }
 
@@ -285,7 +285,7 @@ input:focus + button > svg {
   width: 100%;
   min-height: 45px;
   margin-bottom: 5px;
-  padding: 13px 0;
+  padding: 10px 0;
   padding-left:74px;
 
   border: solid 3px #ffffff;
@@ -305,6 +305,7 @@ input:focus + button > svg {
 	}
 
 p.header-adress {
+  margin: 0px;
   font-size: 14px;
   line-height: 1.71;
   color: #32425c;
@@ -368,13 +369,11 @@ p.header-adress {
   margin-bottom: 50px;
 }
 
-
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding:0 27px;
-
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 }
@@ -382,11 +381,9 @@ p.header-adress {
 .navigation-list li a {
   line-height: 1;
   color: #ffffff;
-
   padding:15px 29px;
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
-
 }
 
 .navigation-list li a:hover {
@@ -398,19 +395,80 @@ p.header-adress {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* блок промо */
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 59px;
 
-.h3 {
-  font-size: 30px;
-  color: #000000;
 }
+
+.promo-item {
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.promo-title{
+  padding-top: 26px;
+  padding-left: 23px;
+
+  font-family: Cuprum;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+
+  color: #ffffff;
+}
+
+.materials {
+  background-color: #ffbf47;
+}
+
+.tool {
+background-color: #3bbce3;
+}
+
+.techincs {
+  background-color: #dc91d8;
+}
+
+.discounts {
+  background-color: #8ed78f;
+}
+
+.delivery{
+  background-color: #ffc047;
+}
+
+.slider {
+  width: 620px;
+  height: 266px;
+
+  margin-bottom: 20px;
+  border: 1px solid red;
+
+
+  color: #ffffff;
+
+  }
+
+
+
+
 
 .about-us {
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-
+.about-title {
+  font-size: 30px;
+  color: #000000;
 }
 
 .slogan {
