@@ -12,7 +12,9 @@
   <header class="page-header">
     <div class="header-top-row">
       <div class="container">
-        <div class="logo"></div>
+        <div class="logo">
+          <a class="full-ref" href="index.html" alt="На главную "></a>
+        </div>
         <div class="search">
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="search-box" placeholder="Поиск:">
@@ -54,16 +56,16 @@
         </div>
       </div>
 
-      <nav class="navigation">
-        <ul class="navigation-list container list-none">
-          <li class="active"> <a class="full-ref">Главная</a></li>
-          <li><a class="full-ref" href="#">Компания</a></li>
-          <li><a class="full-ref" href="catalog.html">Каталог</a></li>
-          <li><a class="full-ref" href="#">Новости</a></li>
-          <li><a class="full-ref" href="#">Спецпредложения</a></li>
-          <li><a class="full-ref" href="#">Доставка</a></li>
-          <li><a class="full-ref" href="#">Контакты</a></li>
-        </ul>
+      <nav class="navigation container">
+          <ul class="navigation-list  list-none">
+            <li class="navigation-item "> <a class="full-ref" href="index.html">Главная</a></li>
+            <li class="navigation-item"><a class="full-ref" href="#">Компания</a></li>
+            <li class="navigation-item active"><a class="full-ref" >Каталог</a></li>
+            <li class="navigation-item"><a class="full-ref" href="#">Новости</a></li>
+            <li class="navigation-item"><a class="full-ref" href="#">Спецпредложения</a></li>
+            <li class="navigation-item"><a class="full-ref" href="#">Доставка</a></li>
+            <li class="navigation-item"><a class="full-ref" href="#">Контакты</a></li>
+          </ul>
       </nav>
   </header>
 
@@ -165,9 +167,23 @@
               <a href="#">По цене</a>
             </li>
             <li class="sorting-item">
-                <a href="#">По типу</a></li>
+              <a href="#">По типу</a>
+            </li>
             <li class="sorting-item">
-                <a href="#"> По функционалу</a></li>
+              <a href="#"> По функционалу</a>
+            </li>
+          </ul>
+          <ul class="regulate-list list-none">
+            <li class="regulate-item regulate-down regulate-active">
+              <a class="full-ref" href="#" aria-label="Упорядочить по уменьшению">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
+              </a>
+            </li>
+            <li class="regulate-item regulate-up ">
+              <a class="full-ref" href="#" aria-label="Упорядочить по возрастанию">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg>
+              </a>
+            </li>
           </ul>
         </section>
 
