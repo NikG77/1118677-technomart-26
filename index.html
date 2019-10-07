@@ -318,9 +318,8 @@
     </footer>
 
     <section class="modal modal-map">
-      <h3 class="promo-title" class="visually-hidden">
-        Карта как до нас добраться
-      </h3 class="promo-title">
+      <h3 class="visually-hidden">Карта как до нас добраться</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018939023874!2d30.321947693611985!3d59.93871647272635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570451187349!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       <p>
         <img src="img/map-big.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </p>
@@ -330,7 +329,7 @@
     </section>
 
     <section class="modal modal-write">
-      <h3 class="promo-title" class="visually-hidden">Написать нам</h3 class="promo-title">
+      <h3 class="visually-hidden">Написать нам</h3>
       <form class="form-message" action="https://echo.htmlacademy.ru" method="post">
         <p class="write-user-name">
           <label for="user-name">Ваше имя</label>
@@ -345,18 +344,119 @@
           <textarea name="user-message" id="cuser-message" rows="4" cols="70" placeholder="В свободной форме"></textarea>
         </p>
         <div class="footer-modal-write">
-          <button class="button" type="submit">
+          <button class="button-modal-write" type="submit">
            Отправить
           </button>
-      </div>
+        </div>
       </form>
-
       <button class="modal-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
+        <span class="visually-hidden">Закрыть</span>
       </button>
-
-
     </section>
+
+
+    <script>
+        var link = document.querySelector(".write-us ");
+
+        var popup = document.querySelector(".modal-write");
+        var close = popup.querySelector(".modal-close");
+
+        var form = popup.querySelector("form");
+        var user = popup.querySelector("[name=user-name]");
+        var mail = popup.querySelector("[name=user-mail]");
+        var message = popup.querySelector("[name=user-message]");
+
+        var isStorageSupport = true;
+        var storageUser = "";
+        var storageMail = "";
+
+        try {
+          storageUser = localStorage.getItem("user");
+        } catch (err) {
+          isStorageSupport = false;
+        }
+
+        try {
+          storageMail = localStorage.getItem("mail");
+        } catch (err) {
+          isStorageSupport = false;
+        }
+
+        link.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.add("modal-show");
+
+          if (storageUser) {
+            user.value = storageUser;
+            mail.focus();
+          }
+            if (storageMail) {
+              mail.value = storageMail;
+              message.focus();
+            }
+          else {
+            user.focus();
+          }
+        });
+
+        close.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        });
+
+        form.addEventListener("submit", function (evt) {
+          if (!user.value || !mail.value || !message.value)  {
+            evt.preventDefault();
+            popup.classList.remove("modal-error");
+            popup.offsetWidth = popup.offsetWidth;
+            popup.classList.add("modal-error");
+          } else {
+            if (isStorageSupport) {
+              localStorage.setItem("user", user.value);
+              localStorage.setItem("mail", mail.value);
+            }
+          }
+        });
+
+        window.addEventListener("keydown", function (evt) {
+          if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (popup.classList.contains("modal-show")) {
+              popup.classList.remove("modal-show");
+              popup.classList.remove("modal-error");
+            }
+          }
+        });
+
+
+        var mapLink = document.querySelector(".main-contacts-map");
+
+        var mapPopup = document.querySelector(".modal-map");
+        var mapClose = mapPopup.querySelector(".modal-close");
+
+        mapLink.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          mapPopup.classList.add("modal-show");
+        });
+
+        mapClose.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          mapPopup.classList.remove("modal-show");
+        });
+
+        window.addEventListener("keydown", function (evt) {
+          if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (mapPopup.classList.contains("modal-show")) {
+              mapPopup.classList.remove("modal-show");
+            }
+          }
+        });
+
+      </script>
+
+
 
   </body>
 </html>

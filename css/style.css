@@ -1901,6 +1901,7 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 
 .modal {
   position: fixed;
+  z-index: 100;
   color: #000000;
   background-color: #ffffff;
 }
@@ -1908,13 +1909,60 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 .modal-write {
   display: none;
   width: 620px;
-  /*height: 430px;*/
+  /*min-height: 430px;*/
   top: 50%;
   left: 50%;
-  transform: translate(-50%, +50%);
-  padding-bottom: 55px;
+  transform: translate(-50%, -80px);
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border-top: 7px solid red;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  70% {
+    transform: translate(-250px, -70px);
+  }
+
+  90% {
+    transform: translate(-250px, -70px);
+  }
+
+  100% {
+    transform: translate(-250px, -70px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .modal-close {
@@ -1949,15 +1997,25 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .form-message {
+  margin: 0 auto;
+  margin-top: 55px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 460px;
-  margin: 0 auto;
+  width: 100%;
+}
+.write-user-name,
+.write-message {
+  padding-left: 80px;
 }
 
-.write-user-name {
-  width: 220px;
+.write-user-mail,
+.write-message {
+  padding-right: 80px;
+}
+
+.write-user-mail {
+  padding-bottom: 22px;
 }
 
 .write-user-name label,
@@ -1965,46 +2023,63 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 .write-message label {
   display: block;
   margin-bottom: 15px;
-  margin-left: 0px;
+}
+
+.write-user-name input[placeholder],
+.write-user-mail input[placeholder] {
+  padding-left: 16px;
+ }
+
+.write-message textarea[placeholder] {
+  padding-left: 16px;
+  padding-top: 12px;
+ }
+
+.write-message {
+  padding-bottom: 37px;
 }
 
 .footer-modal-write {
-   background-color: #f4f4f4;
+  background-color: #f4f4f4;
+  width: 100%;
 }
 
-.form-message .button {
+.button-modal-write {
+  margin: 37px 80px 37px 80px;
   background-color: #ee3643;
   color: #ffffff;
   width: 460px;
-    height: 38px;
-    margin-right: 37px auto;
+  height: 38px;
 }
 
-  .form-message input,
-  .form-message textarea {
-    font-family: 'PT Sans',
-    Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.38;
-    color: #a9a9a9;
-    box-sizing: border-box;
-    padding-left: 16px;
-    border: solid 2px #dee3e4;
-    background-color: #ffffff;
-  }
+.form-message input,
+.form-message textarea {
+  font-family: 'PT Sans',
+  Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #a9a9a9;
+  box-sizing: border-box;
+  padding-left: 16px;
+  border: solid 2px #dee3e4;
+  background-color: #ffffff;
+}
 
 .form-message input {
-    width: 220px;
-    height: 38px;
+  width: 220px;
+  height: 38px;
 }
 
 .write-message textarea {
   width: 460px;
   height: 114px;
 }
+
 .modal-write p {
   margin: 0;
 }
+
+/* Модальная карта */
 
 .modal-map {
   display: none;
@@ -2017,7 +2092,24 @@ box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 
 .modal-map p {
   margin: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+
+
+/*   Окно при покупке товара */
+
 
 .modal-buy p {
   margin: 0;
