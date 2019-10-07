@@ -547,6 +547,7 @@ p.header-adress {
   margin-bottom: 20px;
   position: relative;
   color: #ffffff;
+
 }
 
 .slider-promo-title {
@@ -601,7 +602,7 @@ p.header-adress {
   cursor: pointer;
 }
 
-.promo-controls-item::before{
+.slider-promo-item--1{
   position: absolute;
   content: "";
   top: 113px;
@@ -612,11 +613,11 @@ p.header-adress {
 }
 
 
-.promo-controls-item::after {
+.slider-promo-item--2 {
   position: absolute;
   content: "";
-  top: 133px;
-  right: 25px;
+  top: 113px;
+  right: 20px;
 
   width: 22px;
   height: 40px;
@@ -628,22 +629,37 @@ p.header-adress {
 .slider-promo-item {
   width: 100%;
   height: 266px;
+  background-image: url("../img/sliderImage-1.jpg");
 }
 
 .slider-promo-item:nth-child(1) {
-  display: none;
+  display: block;
   background-image: url("../img/sliderImage-1.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .slider-promo-item:nth-child(2) {
-  display: block;
+  display: none;
   background-image: url("../img/sliderImage-2.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
 
 }
+
+#promo-product-1:checked ~ .slider-promo-list .slider-promo-item:nth-child(1) {
+  display: block;
+}
+
+
+#promo-product-2:checked ~ .slider-promo-list .slider-promo-item:nth-child(2) {
+  display: block;
+}
+
+#promo-product-2:checked ~ .slider-promo-list .slider-promo-item:nth-child(1) {
+  display: none;
+}
+
 
 
 
