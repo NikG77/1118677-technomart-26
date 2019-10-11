@@ -22,6 +22,8 @@ body {
   align-items: center;
 
   height: 38px;
+
+  font-family: Cuprum;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -540,15 +542,13 @@ p.header-adress {
   height: 266px;
   padding-top: 27px;
   padding-left: 25px;
-
-  background-image: url("../img/sliderImage-1.jpg");
-  background-repeat: no-repeat;
 }
 
 .slider-promo-title {
   margin: 0;
   margin-bottom: 8px;
 
+  font-family: Cuprum;
   font-size: 36px;
   font-weight: bold;
   line-height: 36px;
@@ -631,7 +631,6 @@ p.header-adress {
   background-color: #ffffff;
 }
 
-
 .slider-promo-item:nth-child(1) {
   display: none;
   background-image: url("../img/sliderImage-1.jpg");
@@ -665,11 +664,7 @@ p.header-adress {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-
-
 }
-
-
 
 /* Популярные товары и производители */
 
@@ -688,7 +683,7 @@ p.header-adress {
   background-color: #f9f5f0;
 }
 
-.title-big{
+.title-big {
   padding: 0;
   margin: 0;
   font-size: 30px;
@@ -947,9 +942,6 @@ p.header-adress {
 }
 
 
-
-
-
 /* О нас */
 
 .about-us {
@@ -1173,8 +1165,6 @@ p.paragraph-indent {
   background-position: center;
 }
 
-
-
 .social-item:hover,
 .social-item:active  {
   background-color: #ee3643;
@@ -1231,8 +1221,6 @@ p.paragraph-indent {
   color: #ee3643;
   text-decoration: none;
 }
-
-
 
 /* catalog.css */
 
@@ -1743,14 +1731,6 @@ label.radio-new {
 }
 
 
-
-
-
-
-
-
-
-
 .catalog-list {
 display: flex;
 flex-wrap: wrap;
@@ -1802,7 +1782,6 @@ justify-content: space-between;
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
-
 .catalog-img img{
   max-width: 100%;
   margin-bottom: 10px;
@@ -1848,9 +1827,13 @@ justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 44px 0 43px 0;
+
+  width: 218px;
+  height: 164px;
+  padding: 44px 0 37px 0;
+
   background-color:#ffffff;
-  z-index: 1;
+  z-index: 10;
 }
 
 .catalog-item:hover .hidden {
@@ -1861,18 +1844,31 @@ justify-content: space-between;
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.item-buy {
-  position: relative;
+.item-buy,
+.item-bookmark {
   width: 135px;
   height: 38px;
+  margin: 0 auto;
+
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.item-buy {
+  position: relative;
+  margin-bottom: 7px;
+  padding-top: 12px;
+
   box-shadow: inset 0px -3px 0 0 #367315;
   background-color: #63a63e;
   color: #ffffff;
-  margin-bottom: 7px;
+
   border-radius: 3px;
   border: none;
 }
-
 
 .item-buy::before {
   position: absolute;
@@ -1881,20 +1877,22 @@ justify-content: space-between;
   top: 11px;
   width: 15px;
   height: 15px;
-  background-image: url('../img/icon-bookmark.svg');
+  background-image: url('../img/icon-cart.svg');
   opacity: 0.3;
 }
 
 .item-bookmark {
-  width: 135px;
-  height: 38px;
+  padding-top: 7px;
+
   border: solid 3px #63a63e;
   border-radius: 3px;
   background-color: transparent;
+
+  color: #32425c;
 }
 
 .item-buy:hover {
-  background: #5fbb2d;
+  background-color: #5fbb2d;
   box-shadow: inset 0px -3px 0 0 #367315;
 }
 
@@ -1903,17 +1901,13 @@ justify-content: space-between;
   opacity: 1;
 }
 
-
 .item-buy:active {
-  /*border: solid 3px #518534;
-  border-bottom-color: #518534;*/
-  background: #518534;
+  background-color: #518534;
 
 }
 
 .item-bookmark:hover {
   border: solid 3px #32425c;
-  border-bottom-color: #32425c;
 }
 
 .item-bookmark:active {
@@ -1951,7 +1945,6 @@ justify-content: space-between;
 
   color: #000000;
 }
-
 
 .pagination-item a:hover{
   border: solid 1px #bdc6ca;
@@ -1991,24 +1984,15 @@ justify-content: space-between;
 .inner-main-footer p {
   margin: 0;
   padding-top: 30px;
+  width: 938px;
 
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
-/* Перфоратор — универс */
-
-
-width: 938px;
-
-
-font-style: normal;
-font-weight: normal;
-
+  font-weight: normal;
 }
 
-
-
-/* Всплывающая форма */
+/* Всплывающие формы */
 
 .modal {
   position: fixed;
@@ -2050,7 +2034,6 @@ font-weight: normal;
 .modal-error {
   animation: shake 0.6s;
 }
-
 
 @keyframes bounce {
   0% {
@@ -2135,7 +2118,7 @@ font-weight: normal;
 
 .button-modal-write {
   width: 460px;
-  z-index: 2;
+  z-index: 20;
 }
 
 .write-user-mail {
@@ -2147,6 +2130,18 @@ font-weight: normal;
 .write-message label {
   display: block;
   margin-bottom: 15px;
+}
+
+.form-message input[type="text"] {
+  border: solid 2px #d7dcde;
+}
+
+.form-message input[type="text"]:hover {
+  border: solid 2px #b5b5b5;
+}
+
+.form-message input[type="text"]:focus {
+  border: solid 2px #ee3643;
 }
 
 .write-user-name input[placeholder],
@@ -2178,7 +2173,6 @@ font-weight: normal;
   padding-left: 16px;
   border: solid 2px #dee3e4;
   background-color: #ffffff;
-
 }
 
 .form-message input {
@@ -2209,10 +2203,6 @@ font-weight: normal;
   background-color: #565656;
 }
 
-.modal-show-map {
-  display: block;
-}
-
 .modal-map p {
   margin: 0;
   position: absolute;
@@ -2232,12 +2222,7 @@ font-weight: normal;
   display: block;
 }
 
-
 /*   Окно при покупке товара */
-
-.modal-buy p {
-  margin: 0;
-}
 
 .modal-buy {
   display: none;
@@ -2249,6 +2234,15 @@ font-weight: normal;
   border-top: 7px solid red;
   padding-top: 75px;
 }
+
+.modal-show-buy {
+  display: block;
+}
+
+.modal-buy p {
+  margin: 0;
+}
+
 
 .modal-buy-desription {
   position: relative;
@@ -2271,45 +2265,25 @@ font-weight: normal;
 }
 
 .modal-buy-bt {
-  width: 620px;
-  min-height: 112px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
+  width: 620px;
+  min-height: 112px;
   margin: 0px;
   padding: 0px;
   background-color: #f1f1f1;
-  align-content: center;
-
 }
-a.modal-bt-order {
+
+.modal-bt-order {
   width: 220px;
-  height: 38px;
   margin-left: 80px;
-  padding-top:10px;
-  background-color: #ee3643;
-  font-family: Cuprum;
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
 }
 
-a.modal-bt-continue {
+.modal-bt-continue {
   width: 220px;
-  height: 38px;
   margin-right: 80px;
-  padding-top:10px;
   background-color :#ffffff;
-  font-family: Cuprum;
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: center;
   color: #000000;
-  text-transform: uppercase;
 }
-
-
-/*<script src="js/popup.js"></script>*/
