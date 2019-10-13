@@ -2007,14 +2007,14 @@ justify-content: space-between;
 }
 
 /*   Футер Майна?????? */
-.inner-main-footer {
+.main-article {
   min-height: 261px;
   background-color: #f4f7f9;
   padding-top: 67px;
   padding-bottom: 73px;
 }
 
-.inner-main-footer p {
+.main-article p {
   margin: 0;
   padding-top: 30px;
   width: 938px;
