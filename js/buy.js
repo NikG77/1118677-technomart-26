@@ -1,11 +1,13 @@
-var buyLink = document.querySelector(".item-buy");
+var buyLink = document.querySelectorAll(".item-buy");
 
 var buyPopup = document.querySelector(".modal-buy");
 var buyClose = buyPopup.querySelector(".modal-close");
 
-buyLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  buyPopup.classList.add("modal-show-buy");
+buyLink.forEach(function (item) {
+    item.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buyPopup.classList.add("modal-show-buy");
+  });
 });
 
 buyClose.addEventListener("click", function (evt) {

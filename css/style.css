@@ -44,14 +44,15 @@ a {
   color:#ffffff;
 }
 
-/*  это глобальный тег? надо менять? */
-/*h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input:focus + label {
+  outline: #405069;
+}
+
 
 .list-none {
   list-style: none;
@@ -133,6 +134,7 @@ margin-bottom: 59px;
 
 .bookmarkers,
 .order,
+.order-activ,
 .buy {
   height: 42px;
   width: 150px;
@@ -205,16 +207,17 @@ input[type="search"]::placeholder {
 }
 
 
-.bookmarkers a,
-.order a {
+.bookmarkers,
+.order,
+.order-activ {
   padding-left: 15px;
-  display: block;
   position: relative;
+
   text-align: center;
   line-height: 42px;
 }
 
-.bookmarkers a::before {
+.bookmarkers::before {
   position: absolute;
   content: "";
   left: 17px;
@@ -225,7 +228,7 @@ input[type="search"]::placeholder {
   opacity: 0.3;
  }
 
-.order a::before {
+.order::before {
   position: absolute;
   content: "";
   left: 17px;
@@ -237,32 +240,44 @@ input[type="search"]::placeholder {
 }
 
 .order-activ {
-  background-color: #ee3643;
+  background-color: rgb(238, 54, 67);
 }
 
-.bookmarkers a:hover,
-.order a:hover {
+.order-activ::before {
+  position: absolute;
+  content: "";
+  left: 17px;
+  top: 12px;
+  background-image: url('../img/icon-cart.svg');
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+}
+
+.bookmarkers:hover,
+.order:hover {
   background-color: #212a3a;
  }
 
-.bookmarkers a:hover::before,
-.order a:hover::before{
+.bookmarkers:hover::before,
+.order:hover::before{
    opacity: 1;
  }
 
-
-.bookmarkers a:active,
-.order a:active {
+.bookmarkers:active,
+.order:active {
   opacity: 0.6;
   background-color: #161d29;
 }
 
-.bookmarkers a:active::before,
-.order a:active:before {
+.bookmarkers:active::before,
+.order:active:before {
   opacity: 0.5;
 }
 
-.buy a{
+
+
+.buy{
   width: 150px;
   height: 42px;
 
@@ -271,11 +286,11 @@ input[type="search"]::placeholder {
   background-color: #63a63e;
 }
 
-.buy a:hover {
+.buy:hover {
   background-color: #5fbb2d;
 }
 
-.buy a:active {
+.buy:active {
   opacity: 0.5;
   background-color: #5fbb2d;
 }
@@ -406,9 +421,10 @@ p.header-adress {
 }
 
 .navigation-item a {
-  line-height: 1;
-  color: #ffffff;
   padding:21px 29px 25px 29px;
+  font: inherit;
+  line-height: 17px;
+  color: #ffffff;
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 }
@@ -420,6 +436,13 @@ p.header-adress {
 .navigation-item a:active {
   background-color: #1d2739;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.active a:hover,
+.active a:active {
+  background-color: #32425c;
+  color: #ffffff;
+
 }
 
 /* блок промо */
@@ -488,7 +511,7 @@ p.header-adress {
 .tool {
   background-color: #3bbce3;
   background-image: url("../img/icon-2.svg");
-  background-position: 260px 33px;
+  background-position: 197px 33px;
   background-repeat: no-repeat;
 }
 
@@ -538,10 +561,14 @@ p.header-adress {
 
 
 .slider-promo-item {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   height: 266px;
   padding-top: 27px;
   padding-left: 25px;
+  padding-bottom: 22px;
 }
 
 .slider-promo-title {
@@ -558,7 +585,6 @@ p.header-adress {
 .slider-promo-description {
   margin: 0;
   padding: 0;
-  margin-bottom: 120px;
 
   font-size: 18px;
   font-weight: normal;
@@ -566,6 +592,7 @@ p.header-adress {
 }
 
 .slider-btn {
+  margin-top: auto;
   width: 195px;
   border-radius: 3px;
   border: none;
@@ -646,11 +673,11 @@ p.header-adress {
 }
 
 #promo-product-1:checked ~ .slider-promo-list .slider-promo-item:nth-child(1) {
-  display: block;
+  display: flex;
 }
 
 #promo-product-2:checked ~ .slider-promo-list .slider-promo-item:nth-child(2) {
-  display: block;
+  display: flex;
 }
 
 #promo-product-2:checked ~ .slider-promo-controls .slider-promo-item--2::after,
@@ -1234,7 +1261,7 @@ p.paragraph-indent {
 }
 
 a.personal-box  {
-  width: 260px;
+  width: 233px;
   color: #000000;
   padding-left: 46px;
   padding-top: 13px;
@@ -1256,6 +1283,8 @@ a.personal-box::before {
 }
 
 .personal-exit  {
+  display: flex;
+  width: 66px;
   padding-top: 13px;
   font-size: 21px;
   background-color: #ffffff;
@@ -1266,7 +1295,7 @@ a.personal-exit::after {
   content: "";
   position: absolute;
   top: 13px;
-  left: 0px;
+  left: 39px;
   background-image: url("../img/icon-logout.svg");
   width: 20px;
   height: 17px;
@@ -1471,7 +1500,7 @@ a.personal-exit:active::after {
 
   width: 20px;
   height:22px;
-  background-image: url("..//img/filter-button.svg");
+  background-image: url("../img/filter-button.svg");
   cursor: pointer;
 }
 
@@ -1544,12 +1573,13 @@ a.personal-exit:active::after {
 
 
 .filter-option {
-  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-left: 35px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
-  margin-bottom: 18px;
-  padding-left: 35px;
+  text-transform: uppercase;
 }
 
 label.checkbox-new,
@@ -1578,17 +1608,16 @@ label.radio-new {
   background-image: url("../img/checkbox-on.svg");
 }
 
-/*  при блокировке НЕ работает ????*/
-.checkbox:disabled + .checkbox-new::before {
-  opacity: 0.5;
-}
-
-/* меняем при ховере  */
 .checkbox:hover + .checkbox-new::before {
-  cursor: default;
   opacity: 1;
 }
 
+.checkbox:disabled + .checkbox-new {
+  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: default;
+  outline: none;
+}
 
 .radio-new::before {
   position: absolute;
@@ -1607,26 +1636,31 @@ label.radio-new {
   background-image: url("../img/radio-on.svg");
 }
 
-/*  при блокировке НЕ работает !!!!!*/
-.radio-input:disabled + .radio-new::before {
-  opacity: 0.5;
+.radio-input:disabled + .radio-new {
+  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.4);
+
+  cursor: default;
+  outline: none;
 }
 
 .radio-input:hover + .radio-new::before {
-  cursor: default;
-  opacity: 1;
+    opacity: 1;
 }
 
 
 .filters-bt {
   width: 140px;
   height: 38px;
+  margin-bottom: 18px;
+  padding-left: 35px;
 
   border: solid 1px #e5e5e5;
   background-color: #ffffff;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
-  line-height: 1.38;
+  line-height: 18px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -1636,7 +1670,7 @@ label.radio-new {
 .catalog {
   width: 700px;
   margin-bottom: 20px;
-  }
+}
 
 .sorting {
   width:100%;
@@ -1680,13 +1714,6 @@ label.radio-new {
   text-transform: uppercase;
 }
 
-
-/* в сортировщике для изначально красноый цвет для активного элемента как стайл гайду */
-.sorting-active a {
-  border: none;
-  color: #ee3643;
-}
-
 .sorting-item a:hover {
   color: #000000;
   border-bottom: 1px dotted rgb(238, 54, 67);
@@ -1697,9 +1724,12 @@ label.radio-new {
   border: none;
 }
 
-/* .sorting-item:not(:first-child):hover .sorting-item:first-child a {
-  color: rgba(2, 2, 2, 0.3);
-}*/
+.sorting-active a,
+.sorting-active a:hover {
+  border: none;
+  color: #ee3643;
+}
+
 
 .regulate-list {
   display: flex;
@@ -1730,6 +1760,10 @@ label.radio-new {
   fill: #ee3643;
 }
 
+.regulate-active a svg,
+.regulate-active a:hover svg{
+  fill: #ee3643;
+}
 
 .catalog-list {
 display: flex;
@@ -1749,7 +1783,7 @@ justify-content: space-between;
   flex-direction: column;
   align-items: center;
   width: 218px;
- /* height: 318px; */
+  min-height: 318px;
   margin-right: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1765,11 +1799,11 @@ justify-content: space-between;
   margin-right: 0;
 }
 
-
 .catalog-item .product-new {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -1px;
+  right: -1px;
+
   width: 60px;
   height: 60px;
   text-indent: -1000px;
@@ -1778,10 +1812,8 @@ justify-content: space-between;
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
-.catalog-img img{
-  max-width: 100%;
+.catalog-img img {
   margin-bottom: 10px;
-  height: auto;
 }
 
 .catalog-title {
@@ -1824,7 +1856,7 @@ justify-content: space-between;
   top: 0;
   left: 0;
 
-  width: 218px;
+  width: 100%;
   height: 164px;
   padding: 44px 0 37px 0;
 
@@ -1884,7 +1916,7 @@ justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   border: solid 3px #63a63e;
   border-radius: 3px;
   background-color: transparent;
@@ -2139,6 +2171,7 @@ justify-content: space-between;
   background-color: red;
   width: 20px;
   height: 3px;
+  z-index: 10;
 }
 
 .modal-close::before {
@@ -2244,7 +2277,7 @@ justify-content: space-between;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
 }
 
 .modal-map p {

@@ -13,20 +13,14 @@
       <div class="header-top-row">
         <div class="container">
           <div class="logo"></div>
-          <div class="search">
+          <form action="https://echo.htmlacademy.ru" class="search">
             <input type="search" class="search-input" id="search" name="search-box" placeholder="Поиск:">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" /></svg>
-          </div>
-          <div class="bookmarkers">
-            <a class="full-ref" href="#">Закладки: 0</a>
-          </div>
-          <div class="order">
-            <a class="full-ref" href="#" aria-label=" ">Корзина: 0</a>
-          </div>
-          <div class="buy">
-            <a class="full-ref" href="#" aria-label=" ">Оформить заказ</a>
-          </div>
+          </form>
+          <a class="full-ref bookmarkers" href="#">Закладки: 0</a>
+          <a class="full-ref order" href="#">Корзина: 0</a>
+          <a class="full-ref buy" href="#">Оформить заказ</a>
         </div>
       </div>
 
@@ -34,22 +28,22 @@
         <div class="container">
           <p class="page-title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
           <div class="header-contacts">
-            <a class="tel" href="tel:+78125550555" aria-label="Иконка телефона">+7 (812) 555-05-55</a>
+            <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="user-login">
             <div class="personal-enter">
-              <a class="full-ref" href="#" aria-label="Login in">Войти</a>
+              <a class="full-ref" href="#">Войти</a>
             </div>
             <div class="registration">
-              <a class="full-ref" href="#" aria-label="Регистрация">Регистрация</a>
+              <a class="full-ref" href="#">Регистрация</a>
             </div>
           </div>
          </div>
       </div>
 
       <nav class="navigation container">
-          <ul class="navigation-list  list-none">
+          <ul class="navigation-list list-none">
             <li class="navigation-item active"> <a class="full-ref">Главная</a></li>
             <li class="navigation-item"><a class="full-ref" href="#">Компания</a></li>
             <li class="navigation-item"><a class="full-ref" href="catalog.html">Каталог</a></li>
@@ -61,7 +55,6 @@
       </nav>
     </header>
 
-    <main>
       <div class="container">
       <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта Техномарт</h1>
       <section class="promo">
@@ -81,19 +74,19 @@
             <input type="radio" class="visually-hidden" name="promo-toggle" id="promo-product-1" checked>
             <input type="radio" class="visually-hidden" name="promo-toggle" id="promo-product-2">
             <div class="slider-promo-controls">
-              <label class="promo-controls-item slider-promo-item--1" for="promo-product-1"></label>
-              <label class="promo-controls-item slider-promo-item--2" for="promo-product-2"></label>
+              <label class="promo-controls-item slider-promo-item--1" for="promo-product-1" tabindex="0"></label>
+              <label class="promo-controls-item slider-promo-item--2" for="promo-product-2" tabindex="0"></label>
             </div>
             <ul class="slider-promo-list list-none">
               <li class="slider-promo-item">
                 <h3 class="slider-promo-title">Дрели</h3>
                 <p class="slider-promo-description">Соседям на радость!</p>
-                <a class="btn slider-btn" href="catalog.html"  aria-label="Перейти на страницу каталога">Открыть каталог</a>
+                <a class="btn slider-btn" href="catalog.html">Открыть каталог</a>
               </li>
               <li class="slider-promo-item">
                 <h3 class="slider-promo-title">Перфораторы</h3>
                 <p class="slider-promo-description">Настоящие мужские игрушки</p>
-                <a class="btn slider-btn" href="catalog.html" aria-label="Перейти на страницу каталога">Открыть каталог</a>
+                <a class="btn slider-btn" href="catalog.html">Открыть каталог</a>
               </li>
             </ul>
           </div>
@@ -121,7 +114,7 @@
           <a class="btn popular-btn" href="#">Все популярные товары</a>
         </div>
         <ul class="catalog-popular list-none">
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-img">
               <img src="img/product-bfg9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             </div>
@@ -133,7 +126,7 @@
               <a href="#" class="item-bookmark full-ref">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-img">
               <img src="img/product-bfg3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             </div>
@@ -145,7 +138,7 @@
               <a href="#" class="item-bookmark full-ref">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-img">
               <img src="img/product-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             </div>
@@ -157,7 +150,7 @@
               <a href="#" class="item-bookmark full-ref">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="product-new"></div>
             <div class="catalog-img">
               <img src="img/product-bfg2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -215,9 +208,9 @@
           <input type="radio" class="visually-hidden" name="services-toggle" id="services-product-2">
           <input type="radio" class="visually-hidden" name="services-toggle" id="services-product-3">
           <div class="slider-servises-controls">
-            <label class="slider-controls-item slider-controls-item--1 active-slider" for="services-product-1">Доставка</label>
-            <label class="slider-controls-item slider-controls-item--2" for="services-product-2">Гарантия</label>
-            <label class="slider-controls-item slider-controls-item--3" for="services-product-3">Кредит</label>
+            <label class="slider-controls-item slider-controls-item--1 active-slider" for="services-product-1" tabindex="0">Доставка</label>
+            <label class="slider-controls-item slider-controls-item--2" for="services-product-2" tabindex="0">Гарантия</label>
+            <label class="slider-controls-item slider-controls-item--3" for="services-product-3" tabindex="0">Кредит</label>
           </div>
           <ul class="slider-servises-list list-none">
             <li class="slider-servises-item">
@@ -259,7 +252,7 @@
         <div class="main-contacts">
           <h3 class="about-title">Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="main-contacts-map" href="#"><img src="img/map.png" width="300" height=158 alt="Карта"></a>
+          <a class="main-contacts-map" href="#"><img src="img/map.png" width="300" height=158 alt="Карта с адресом офиса ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
           <a class="btn write-us" href="writeus.html" aria-label="Форма обратной связи">Заблудились? Напишите нам!</a>
         </div>
       </section>
