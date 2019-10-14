@@ -1827,11 +1827,12 @@ justify-content: space-between;
 }
 
 .catalog-item .old-prise {
-  min-height: 38px;
-  padding: 0 auto;
+  height: 38px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
+  line-height: 18px;
   color: #999999;
   text-decoration: line-through;
 }
@@ -1845,6 +1846,7 @@ justify-content: space-between;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
+  line-height: 18px;
   background-image: url("../img/item-button.svg");
 }
 
