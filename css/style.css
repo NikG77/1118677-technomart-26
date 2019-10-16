@@ -80,7 +80,7 @@ input:focus + label {
 .main-header,
 .page-header {
   background-color: #f4f7f9;
-  padding-bottom: 50px;
+  padding-bottom: 59px;
 }
 
 .main-header {
@@ -158,7 +158,7 @@ margin-bottom: 59px;
 .search input[type="search"] {
   height: 42px;
   width: 100%;
-  padding: 12px 0 12px 50px;
+  padding: 11px 0 12px 48px;
   font-size: 17px;
   line-height: 18px;
   background-color: #293449;
@@ -298,7 +298,7 @@ input[type="search"]::placeholder {
 .header-middle-row {
   min-height: 60px;
   background-color: #f4f7f9;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
 }
 
 .header-middle-row .container {
@@ -310,7 +310,7 @@ input[type="search"]::placeholder {
   margin: 0;
   padding: 0;
   margin-left:53px;
-  padding-top: 8px;
+  padding-top: 2px;
   width: 197px;
   font-size: 16px;
   font-style: italic;
@@ -323,27 +323,33 @@ input[type="search"]::placeholder {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left:71px;
+  margin-left: 70px;
 }
 
 .header-contacts a {
+  position: relative;
   width: 100%;
   min-height: 45px;
   margin-bottom: 5px;
-  padding: 10px 0;
-  padding-left:74px;
+  padding-top: 9px;
+  padding-left: 71px;
 
   border: solid 3px #ffffff;
-  /*height: 21px;*/
-  position: relative;
+
+  font-family: Cuprum;
   font-size: 21px;
+  font-weight: normal;
+  line-height: 21px;
+
   color: #ee3643;
 }
+
 .header-contacts a::before {
   content: "";
   position: absolute;
-	top: 13px;
-	left: 15px;
+	top: 10px;
+  left: 12px;
+
 	width: 19px;
 	height: 19px;
 	background: url('../img/icon-phone.svg') no-repeat;
@@ -351,8 +357,11 @@ input[type="search"]::placeholder {
 
 p.header-adress {
   margin: 0px;
+  padding-left: 9px;
+  font-family: Cuprum;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 21px;
   color: #32425c;
  }
 
@@ -365,8 +374,8 @@ p.header-adress {
   position: relative;
   width: 121px;
   height: 45px;
-  padding-top: 10px;
-  padding-left: 48px;
+  padding-top: 12px;
+  padding-left: 47px;
   font-size: 21px;
   line-height: 1;
   background-color: #ffffff;
@@ -387,8 +396,8 @@ p.header-adress {
 .registration a {
   width: 150px;
   height: 45px;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding-top: 13px;
+  padding-left: 24px;
   margin-left: 10px;
   font-size: 21px;
   color: #000000;
@@ -413,21 +422,46 @@ p.header-adress {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 27px;
-  padding-right: 28px;
-  justify-content: space-between;
+  padding-left: 23px;
+  padding-right: 26px;
+  /*justify-content: space-between;*/
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 }
 
 .navigation-item a {
-  padding:21px 29px 25px 29px;
-  font: inherit;
+  padding:20px 29px 23px 29px;
+
+  font-family: Cuprum;
+  font-size: 17px;
+  font-weight: normal;
   line-height: 17px;
   color: #ffffff;
   box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 }
+.nav-item-company {
+  padding-left: 5px;
+}
+.nav-item-catalog {
+  padding-left: 1px;
+}
+
+.nav-item-news {
+  padding-left: 2px;
+}
+
+.nav-item-sale {
+  padding-left: 1px;
+}
+
+.nav-item-delivery {
+  padding-left: 4px;
+}
+
+.nav-item-contact {
+  padding-left: 4px;
+}*/
 
 .navigation-item a:hover {
   background-color:#1d2739;
@@ -464,15 +498,17 @@ p.header-adress {
 
 .promo-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 300px;
   height: 123px;
-  padding: 26px 0px 22px 23px;
+  padding: 22px 0px 22px 22px;
   margin-bottom: 20px;
 }
 
 .promo-title {
   margin: 0;
-  margin-bottom: 15px;
 
   font-family: Cuprum;
   font-size: 24px;
@@ -484,7 +520,10 @@ p.header-adress {
 
 .promo-btn {
   width: 135px;
-  border: none;
+
+
+  border-radius: 3px;
+  /*border: none;*/
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -497,6 +536,9 @@ p.header-adress {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.promo-column1 a {
+  margin-left: 3px;
+}
 
 
 .materials {
@@ -535,6 +577,7 @@ p.header-adress {
   background-image: url("../img/icon-5.svg");
   background-position: 191px 31px;
   background-repeat: no-repeat;
+  margin-bottom: 0px;
 }
 
 .new {
@@ -566,14 +609,14 @@ p.header-adress {
 
   width: 100%;
   height: 266px;
-  padding-top: 27px;
-  padding-left: 25px;
-  padding-bottom: 22px;
+  padding-top: 23px;
+  padding-left: 24px;
+  padding-bottom: 21px;
 }
 
 .slider-promo-title {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 
   font-family: Cuprum;
   font-size: 36px;
@@ -680,8 +723,8 @@ p.header-adress {
   display: flex;
 }
 
-#promo-product-2:checked ~ .slider-promo-controls .slider-promo-item--2::after,
-#promo-product-1:checked ~ .slider-promo-controls .slider-promo-item--1::after {
+#promo-product-1:checked ~ .slider-promo-controls .slider-promo-item--2::after,
+#promo-product-2:checked ~ .slider-promo-controls .slider-promo-item--1::after {
   content: "";
   position: absolute;
   left: 2px;
@@ -703,7 +746,7 @@ p.header-adress {
 
   width: 100%;
   height: 89px;
-  padding-left: 30px;
+  padding-left: 28px;
   padding-right: 24px;
   margin-bottom: 20px;
 
@@ -756,13 +799,44 @@ p.header-adress {
    margin: auto;
 }
 
+
+.img-makita {
+  padding-bottom: 3px;
+}
+
+.img-dewalt {
+  padding-bottom: 3px;
+}
+
+.img-hitachi {
+  padding-top: 4px;
+  padding-left: 5px;
+}
+
+.img-lg {
+  padding-right: 3px;
+}
+
+.img-inerskol {
+  padding-bottom: 14px;
+}
+
+.img-aeg {
+  padding-bottom: 1px;
+}
+
+.img-metabo {
+  padding-bottom: 6px;
+  padding-left: 3px;
+}
+
  .manufacturer-item:hover {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   background-color: #ffffff;
  }
 
  .manufacturer-item:active {
-  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+  box-shadow: 0px 4px 10px 0 rgba(38, 64, 110, 0.5);
   background-color: #ffffff;
   opacity: 0.3;
  }
@@ -779,8 +853,7 @@ p.header-adress {
 }
 
 .slider-servises {
-  padding-top: 68px;
-  padding-bottom: 40px;
+  padding-top: 66px;
   position: relative;
   min-height: 522px;
 }
@@ -788,7 +861,7 @@ p.header-adress {
 .servises-title {
   margin: 0;
   padding: 0;
-  padding-bottom: 38px;
+  padding-bottom: 26px;
   font-family: Cuprum;
   font-size: 30px;
   font-weight: normal;
@@ -801,7 +874,7 @@ p.header-adress {
 .description {
   margin: 0;
   padding: 0;
-  margin-bottom: 74px;
+  margin-bottom: 79px;
   width: 398px;
   height: 37px;
   font-family: 'PT Sans', Arial, sans-serif;
@@ -826,7 +899,7 @@ p.header-adress {
   width: 240px;
   height: 61px;
   cursor: pointer;
-  padding-top: 19px;
+  padding-top: 14px;
   padding-left: 22px;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   background-color: #32425c;
@@ -934,14 +1007,16 @@ p.header-adress {
 }
 
 .slider-servises-title {
-  margin: 0;
   max-width: 390px;
-  margin-bottom: 34px;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-left: 321px;
+
   font-size: 36px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 36px;
   color: #32425c;
-  margin-left: 320px;
+
   text-transform: uppercase;
 }
 
@@ -980,12 +1055,14 @@ p.header-adress {
 
 .about-title {
   margin: 0;
-  padding-top: 82px;
-  margin-bottom: 38px;
+  padding-top: 79px;
+  margin-bottom: 26px;
 
   font-size: 30px;
+  font-weight: normal;
   line-height: 30px;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .slogan {
@@ -1005,15 +1082,22 @@ p.header-adress {
   margin: 0;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
+  font-weight: normal;
   line-height: 24px;
+
+  font-style: normal;
+  font-stretch: normal;
+
+  letter-spacing: normal;
   color: #000000;
 }
 
 p.paragraph-indent {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .carriers-list {
+  margin-top: -3px;
   margin-bottom: 13px;
 }
 
@@ -1024,20 +1108,22 @@ p.paragraph-indent {
 
 .main-contacts p {
   width: 179px ;
-  margin-bottom: 37px;
+  margin-bottom: 31px;
 }
 
 .write-us {
   width: 300px;
+  padding-top: 2px;
+  padding-left: 5px;
 }
 
 .main-contacts-map {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .carrier-item {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding-left: 36px;
   font-size: 18px;
   line-height: 20px;
@@ -1047,16 +1133,16 @@ p.paragraph-indent {
   position: absolute;
   content: "";
   width: 25px;
-  height: 1px;
+  height: 2px;
   background-color: #ee3643;
   left: 0px;
-  top: 8px;
+  top: 9px;
   z-index: 1;
 }
 
 .footer-top-row {
   background-color: #32425c;
-  padding-bottom: 32px;
+  padding-bottom: 27px;
 }
 
 .footer-top-row .container {
@@ -1071,13 +1157,13 @@ p.paragraph-indent {
 
   background-image: url('../img/logo-technomart.svg');
   background-repeat: no-repeat;
-  background-size: 138px 23px;
-  background-position: 50% 50%;
+  background-size: 136px 23px;
+  background-position: 50% 46%;
 }
 
 .footer-navigation {
   margin-left: 173px;
-  padding-top: 42px;
+  padding-top: 38px;
   flex-grow: 1;
 }
 
@@ -1105,7 +1191,7 @@ p.paragraph-indent {
 }
 
 .footer-middle-row {
-  padding-bottom: 32px;
+  padding-bottom: 49px;
   background-color: #32425c;
 }
 
@@ -1117,9 +1203,14 @@ p.paragraph-indent {
 
 .footer-adress {
   margin: 0;
-  width: 315px;
+  padding-left: 2px;
+  padding-top: 1px;
+  width: 327px;
+
+  font-family: Cuprum;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
+  font-weight: normal;
   color: #f3f7f9;
 }
 
@@ -1128,7 +1219,7 @@ p.paragraph-indent {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-grow: 1;
-  margin-left: 91px;
+  margin-left: 88px;
   }
 
 .footer-catalog-list a {
@@ -1175,7 +1266,8 @@ p.paragraph-indent {
 .social {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 161px;
+  margin-left: 162px;
+  margin-top: -2px;
 }
 
 .social-item {
@@ -1228,7 +1320,9 @@ p.paragraph-indent {
 .developer p{
   margin: 0;
   font-size: 16px;
-  line-height: 1.13;
+  line-height: 18px;
+  font-weight: normal;
+
   color: #ffffff;
 }
 
@@ -1782,7 +1876,7 @@ justify-content: space-between;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 218px;
+  width: 220px;
   min-height: 318px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -1813,12 +1907,12 @@ justify-content: space-between;
 }
 
 .catalog-img img {
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .catalog-title {
   max-width: 160px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -1827,7 +1921,7 @@ justify-content: space-between;
 }
 
 .catalog-item .old-prise {
-  height: 38px;
+  min-height: 28px;
 
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
@@ -1840,14 +1934,19 @@ justify-content: space-between;
 .catalog-item .new-prise {
   width: 141px;
   height: 38px;
+  margin-left: 15px;
   margin-top: auto;
-  padding: 10px 30px;
+  padding-top: 11px;
+  padding-left: 32px;
   color: white;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
   background-image: url("../img/item-button.svg");
+  background-repeat: no-repeat;
+
+
 }
 
 
@@ -2008,7 +2107,6 @@ justify-content: space-between;
   border: solid 1px #ee3643;
 }
 
-/*   Футер Майна?????? */
 .main-article {
   min-height: 261px;
   background-color: #f4f7f9;
@@ -2063,15 +2161,15 @@ justify-content: space-between;
 
 .modal-show-popup {
   display: block;
-  animation: bounce 0.6s;
+  animation: bounce 2.6s;
 }
 
 .modal-error {
   animation: shake 0.6s;
 }
 
-/*
-@keyframes bounce {
+
+/*@keyframes bounce {
 
   0% {
 
@@ -2111,23 +2209,23 @@ justify-content: space-between;
 
   }
 
-} */
+}*/
 
 @keyframes bounce {
   0% {
-    transform: translate(0px, 0px);
+    transform: translate(0px, -200px);
   }
 
   70% {
-    transform: translate(-300px, -220px);
+    transform: translate(-50px, 0px);
   }
 
   90% {
-    transform: translate(-300px, -220px);
+    transform: translate(-50px, 0px);
   }
 
   100% {
-    transform: translate(-300px, -220px);
+    transform: translate(-10px, 0px);
   }
 }
 
@@ -2294,7 +2392,8 @@ justify-content: space-between;
   position: relative;
   z-index: 2;
   width: 940px;
-  height: 447px;
+  height: 446px;
+
 
   box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
   border: none;
