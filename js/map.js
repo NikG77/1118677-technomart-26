@@ -1,5 +1,4 @@
 var mapLink = document.querySelector(".main-contacts-map");
-
 var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-close");
 
@@ -21,5 +20,7 @@ window.addEventListener("keydown", function (evt) {
     }
     }
 });
+
+
 
 
