@@ -1585,9 +1585,10 @@ p.paragraph-indent {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 59px;
-	-webkit-box-align: center;
+  padding-top: 25px;
+	/*-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;
+	        align-items: center;*/
 }
 
 .breadcrumbs-home svg {
@@ -1943,9 +1944,10 @@ label.radio-new {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
+  padding-top: 12px;    
+  /*-webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center;*/
   background-color: #f7f3ec;
   margin-bottom: 20px;
 }
@@ -2678,13 +2680,11 @@ display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 620px;
   min-height: 112px;
   margin: 0px;
   padding: 0px;
+  padding-top: 38px;
   background-color: #f1f1f1;
 }
 
