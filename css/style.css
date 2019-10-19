@@ -688,14 +688,18 @@ p.header-adress {
 .slider-btn:hover,
 .popular-btn:hover,
 .about-company:hover,
-.write-us:hover {
+.write-us:hover,
+.modal-bt-order:hover,
+.button-modal-write:hover {
   background-color: #ca2c37;
 }
 
 .slider-btn:active,
 .popular-btn:active,
 .about-company:active,
-.write-us:active {
+.write-us:active,
+.modal-bt-order:active,
+.button-modal-write:active {
   background-color: #ba2732;
 }
 
@@ -793,10 +797,9 @@ p.header-adress {
 #promo-product-1:focus ~ .slider-promo-controls .slider-promo-item--1 {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: dotted;
   outline-width: 5px;
-
-}
+ }
 
 
 /* Популярные товары и производители */
@@ -1068,7 +1071,7 @@ p.header-adress {
 #services-product-1:focus ~ .slider-servises-controls .slider-controls-item--1 {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: dotted;
   outline-width: 5px;
 }
 
@@ -1083,7 +1086,7 @@ p.header-adress {
 #services-product-2:focus ~ .slider-servises-controls .slider-controls-item--2 {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+   outline-style: dotted;
   outline-width: 5px;
 }
 
@@ -1094,7 +1097,7 @@ p.header-adress {
 #services-product-3:focus ~ .slider-servises-controls .slider-controls-item--3 {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: dotted;
   outline-width: 5px;
 }
 
@@ -1586,9 +1589,10 @@ p.paragraph-indent {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 59px;
-	-webkit-box-align: center;
+  padding-top: 22px;
+	/*-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;
+	        align-items: center; */
 }
 
 .breadcrumbs-home svg {
@@ -1760,9 +1764,9 @@ p.paragraph-indent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  /*-webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-between;*/
   position: relative;
 }
 
@@ -1791,6 +1795,10 @@ p.paragraph-indent {
   border: none;
   border-radius: 3px;
   background: #f7f3ec;
+}
+
+.max-price {
+  margin-left: auto;
 }
 
 /* чекбокс и радио фильтры*/
@@ -1910,7 +1918,7 @@ label.radio-new {
 .radio-input:focus + label {
   outline-color: rgb(77, 144, 254);
   outline-offset: -2px;
-  outline-style: auto;
+  outline-style: dotted;
   outline-width: 5px;
 }
 
@@ -2683,13 +2691,14 @@ display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
+  /*-webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center;*/
   width: 620px;
   min-height: 112px;
   margin: 0px;
   padding: 0px;
+  padding-top: 38px;
   background-color: #f1f1f1;
 }
 
