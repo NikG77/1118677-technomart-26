@@ -806,6 +806,8 @@ p.header-adress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1004,34 +1006,63 @@ p.header-adress {
 }
 
 .slider-servises-list {
-  min-height: 285px;
+  margin-left: 320px;
 }
 
 .slider-servises-item {
   display: none;
-  min-height: 100%;
+  min-height: 285px;
+}
+
+.slider-servises-title {
+  max-width: 390px;
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 36px;
+  font-weight: 400;
+
+  line-height: 36px;
+  color: #32425c;
+
+  text-transform: uppercase;
+}
+
+.slider-servises-item p {
+  margin: 0;
+  max-width: 377px; /* подгонял чтоб текст вошел по образцу */
+
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 0px;
+}
+
+.slider-servises-bt {
+  width: 195px;
+  margin-top: 25px;
+
+  border-radius: 3px;
+  border: none;
 }
 
 .slider-servises-item:nth-child(1) {
   background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
-  background-position: 471px 21px;
+  background-position: 100% 21px;
 }
 
 .slider-servises-item:nth-child(2) {
   background-image: url("../img/guarantee.png");
   background-repeat: no-repeat;
-  background-position: 559px 0px;
+  background-position: 100% 0px;
 }
 
 .slider-servises-item:nth-child(3) {
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
-  background-position: 485px 0px;
-}
-
-#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1) {
-  display: block;
+  background-position: 100% 0px;
 }
 
 #services-product-1:focus ~ .slider-servises-controls .slider-controls-item--1 {
@@ -1039,6 +1070,10 @@ p.header-adress {
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
+}
+
+#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1) {
+  display: block;
 }
 
 #services-product-2:checked ~ .slider-servises-list .slider-servises-item:nth-child(2) {
@@ -1062,7 +1097,6 @@ p.header-adress {
   outline-style: auto;
   outline-width: 5px;
 }
-
 
 #services-product-1:hover ~ .slider-servises-controls .slider-controls-item--1,
 #services-product-2:hover ~ .slider-servises-controls .slider-controls-item--2,
@@ -1093,41 +1127,6 @@ p.header-adress {
   color: #ffffff;
 }
 
-.slider-servises-title {
-  max-width: 390px;
-  margin: 0;
-  margin-bottom: 24px;
-  margin-left: 321px;
-
-  font-size: 36px;
-  font-weight: 400;
-
-  line-height: 36px;
-  color: #32425c;
-
-  text-transform: uppercase;
-}
-
-.slider-servises-item p {
-  margin: 0;
-  max-width: 377px; /* подгонял чтоб текст вошел по образцу */
-  margin-left: 320px;
-
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-
-
-  line-height: 24px;
-  color: #000000;
-  margin-bottom: 0px;
-}
-
-.slider-servises-bt {
-  width: 195px;
-
-  border-radius: 3px;
-  border: none;
-}
 
 /* О нас */
 
@@ -1242,6 +1241,8 @@ p.paragraph-indent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer-navigation {
@@ -1585,10 +1586,9 @@ p.paragraph-indent {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 59px;
-  padding-top: 25px;
-	/*-webkit-box-align: center;
+	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;*/
+	        align-items: center;
 }
 
 .breadcrumbs-home svg {
@@ -1944,10 +1944,9 @@ label.radio-new {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 12px;    
-  /*-webkit-box-align: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;*/
+          align-items: center;
   background-color: #f7f3ec;
   margin-bottom: 20px;
 }
@@ -2680,11 +2679,13 @@ display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 620px;
   min-height: 112px;
   margin: 0px;
   padding: 0px;
-  padding-top: 38px;
   background-color: #f1f1f1;
 }
 
