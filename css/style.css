@@ -1684,13 +1684,14 @@ p.paragraph-indent {
 
 /* фильтр цены */
 
-.filter-price {
+/*.filter-price {
   margin-bottom: 25px;
-}
+}*/
 
 .filter-price-item {
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
   border: none;
 }
 
@@ -1799,7 +1800,7 @@ p.paragraph-indent {
   position: relative;
   padding: 0;
   margin: 0;
-  padding: 61px 0 2px 35px;
+  padding: 61px 0 2px 0px;
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -1828,7 +1829,6 @@ p.paragraph-indent {
   margin-bottom: 57px;
 }
 
-
 .filter-option {
   margin-bottom: 20px;
   padding-left: 0px;
@@ -1843,13 +1843,14 @@ label.checkbox-new,
 label.radio-new {
   position: relative;
   cursor: pointer;
+  padding-left: 35px;
 }
 
 .checkbox-new::before {
   content: "";
   position: absolute;
   top: -3px;
-  left: -35px;
+  left: 0px;
   width: 23px;
   height: 23px;
 
@@ -1879,7 +1880,7 @@ label.radio-new {
   position: absolute;
   content: "";
   top: -4px;
-  left: -35px;
+  left: 0px;
 
   width: 25px;
   height: 25px;
@@ -1944,11 +1945,12 @@ label.radio-new {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
+  /* -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; */
   background-color: #f7f3ec;
   margin-bottom: 20px;
+  padding-top: 12px;
 }
 
 .sorting-title {
@@ -2011,25 +2013,25 @@ label.radio-new {
 }
 
 .regulate-up {
-  padding-left: 21px;
+  margin-left: 21px;
 }
 
-.regulate-item a svg {
+.regulate-item svg {
   fill: #c5c5c5;
 }
 
-.regulate-item a:hover svg,
-.regulate-item a:focus svg {
+.regulate-item:hover svg,
+.regulate-item:focus svg {
   fill: #231F20;
 }
 
-.regulate-item a:active svg{
+.regulate-item:active svg {
   fill: #ee3643;
 }
 
-.regulate-active a svg,
-.regulate-active a:hover svg,
-.regulate-active a:focus svg {
+.regulate-active svg,
+.regulate-active:hover svg,
+.regulate-active:focus svg {
   fill: #ee3643;
 }
 
@@ -2124,11 +2126,12 @@ display: flex;
   height: 38px;
   margin-left: 6px;
   margin-top: auto;
-  padding-top: 13px;
   padding-left: 35px;
+
   color: white;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
+  line-height: 38px;
   font-weight: bold;
 
   background-image: url("../img/item-button.svg");
@@ -2158,6 +2161,7 @@ display: flex;
 .catalog-item:focus {
   -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
           box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+    outline: none;
 }
 
 .item-buy,
