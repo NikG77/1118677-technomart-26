@@ -147,13 +147,13 @@ margin-bottom: 59px;
   background-position: 50% 46%;
 }
 
-.logo:hover,
-.logo-footer:hover {
+.page-header .logo:hover,
+.page-footer .logo-footer:hover {
   background-color: #ca2c37;
 }
 
-.logo:active,
-.logo-footer:active {
+.page-header .logo:active,
+.page-footer .logo-footer:active {
   background-color: #ba2732;
 }
 
