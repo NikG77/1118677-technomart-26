@@ -698,7 +698,14 @@ p.header-adress {
 .write-us:hover,
 .modal-bt-order:hover,
 .button-modal-write:hover,
-.slider-servises-bt:hover {
+.slider-servises-bt:hover,
+.slider-btn:focus,
+.popular-btn:focus,
+.about-company:focus,
+.write-us:focus,
+.modal-bt-order:focus,
+.button-modal-write:focus,
+.slider-servises-bt:focus {
   background-color: #ca2c37;
 }
 
@@ -1286,7 +1293,9 @@ p.paragraph-indent {
 }
 
 .footer-navigation-list a:hover,
-.footer-catalog-list a:hover{
+.footer-catalog-list a:hover,
+.footer-navigation-list a:focus,
+.footer-catalog-list a:focus {
   text-decoration: underline;
 }
 
@@ -1457,7 +1466,9 @@ p.paragraph-indent {
 }
 
 .feedback a:hover,
-.developer a:hover {
+.developer a:hover,
+.feedback a:focus,
+.developer a:focus  {
   text-decoration: underline;
 }
 
@@ -2054,9 +2065,7 @@ label.radio-new {
   fill: #ee3643;
 }
 
-.regulate-active svg /*,
-.regulate-active:hover svg,
-.regulate-active:focus svg */ {
+.regulate-active svg {
   fill: #ee3643;
 }
 
