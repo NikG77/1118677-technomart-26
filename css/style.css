@@ -706,33 +706,6 @@ p.header-adress {
   background-color: #ba2732;
 }
 
-/*
-.slider-btn:hover,
-.popular-btn:hover,
-.about-company:hover,
-.write-us:hover,
-.modal-bt-order:hover,
-.button-modal-write:hover,
-.slider-servises-bt:hover,
-..slider-btn:focus,
-..popular-btn:focus,
-..about-company:focus,
-..write-us:focus,
-..modal-bt-order:focus,
-..button-modal-write:focus,
-..slider-servises-bt:focus {
-  background-color: #ca2c37;
-}
-
-.slider-btn:active,
-.popular-btn:active,
-.about-company:active,
-.write-us:active,
-.modal-bt-order:active,
-.button-modal-write:active,
-.slider-servises-bt:active {
-  background-color: #ba2732;
-}*/
 
 .promo-controls-item {
   position: relative;
@@ -822,17 +795,13 @@ p.header-adress {
   height: 6px;
   border-radius: 50%;
 }
+
 #promo-product-2:focus ~ .slider-promo-controls .slider-promo-item--2::before,
 #promo-product-1:focus ~ .slider-promo-controls .slider-promo-item--1::before,
 #promo-product-2:focus ~ .slider-promo-controls .slider-promo-item--2,
 #promo-product-1:focus ~ .slider-promo-controls .slider-promo-item--1 {
   outline: -webkit-focus-ring-color auto 4px;
-
-  /* outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: dotted;
-  outline-width: 5px; */
- }
+}
 
 
 /* Популярные товары и производители */
@@ -1069,7 +1038,7 @@ p.header-adress {
 
 .slider-servises-item p {
   margin: 0;
-  max-width: 377px; /* подгонял чтоб текст вошел по образцу */
+  max-width: 377px; 
 
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -1101,43 +1070,10 @@ p.header-adress {
   background-position: 100% 0px;
 }
 
-#services-product-1:focus ~ .slider-servises-controls .slider-controls-item--1 {
-  outline: -webkit-focus-ring-color auto 1px;
-
-  /* outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: dotted;
-  outline-width: 5px; */
-}
-
-#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1) {
-  display: block;
-}
-
-#services-product-2:checked ~ .slider-servises-list .slider-servises-item:nth-child(2) {
-  display: block;
-}
-
-#services-product-2:focus ~ .slider-servises-controls .slider-controls-item--2 {
-  outline: -webkit-focus-ring-color auto 1px;
-
-  /* outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: dotted;
-  outline-width: 5px; */
-}
-
+#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1), 
+#services-product-2:checked ~ .slider-servises-list .slider-servises-item:nth-child(2),
 #services-product-3:checked ~ .slider-servises-list .slider-servises-item:nth-child(3) {
   display: block;
-}
-
-#services-product-3:focus ~ .slider-servises-controls .slider-controls-item--3 {
-  outline: -webkit-focus-ring-color auto 1px;
-
-  /* outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: dotted;
-  outline-width: 5px; */
 }
 
 #services-product-1:hover ~ .slider-servises-controls .slider-controls-item--1,
@@ -1149,6 +1085,7 @@ p.header-adress {
   -webkit-box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
           box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   background-color: #293449;
+  outline: -webkit-focus-ring-color auto 3px;
   color: #ffffff;
 }
 
