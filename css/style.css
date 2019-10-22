@@ -182,7 +182,6 @@ margin-bottom: 59px;
   width: 100%;
   padding: 11px 0 12px 48px;
 
-
   background-color: #293449;
   border:none;
   color: #ffffff;
@@ -194,7 +193,7 @@ margin-bottom: 59px;
 }
 
 .search-input:focus ~ svg {
-   fill: #ee3643;
+  fill: #ee3643;
 }
 
 .search-input:focus {
@@ -524,7 +523,6 @@ p.header-adress {
 .nav-activ a:focus {
   background-color: #32425c;
   color: #ffffff;
-
 }
 
 /* блок промо */
@@ -539,6 +537,7 @@ p.header-adress {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .promo-column1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -580,7 +579,6 @@ p.header-adress {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-
   color: #ffffff;
 }
 
@@ -800,9 +798,8 @@ p.header-adress {
 #promo-product-1:focus ~ .slider-promo-controls .slider-promo-item--1::before,
 #promo-product-2:focus ~ .slider-promo-controls .slider-promo-item--2,
 #promo-product-1:focus ~ .slider-promo-controls .slider-promo-item--1 {
-  outline: -webkit-focus-ring-color auto 4px;
+  outline: -webkit-focus-ring-color auto 3px;
 }
-
 
 /* Популярные товары и производители */
 
@@ -943,7 +940,6 @@ p.header-adress {
 .slider-servises {
   position: relative;
   padding-top: 66px;
-  /* min-height: 522px; */
 }
 
 .servises-title {
@@ -1029,22 +1025,19 @@ p.header-adress {
 
   font-size: 36px;
   font-weight: 400;
-
   line-height: 36px;
   color: #32425c;
-
   text-transform: uppercase;
 }
 
 .slider-servises-item p {
   margin: 0;
-  max-width: 377px; 
+  max-width: 377px;
 
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
-  margin-bottom: 0px;
 }
 
 .slider-servises-bt {
@@ -1070,7 +1063,7 @@ p.header-adress {
   background-position: 100% 0px;
 }
 
-#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1), 
+#services-product-1:checked ~ .slider-servises-list .slider-servises-item:nth-child(1),
 #services-product-2:checked ~ .slider-servises-list .slider-servises-item:nth-child(2),
 #services-product-3:checked ~ .slider-servises-list .slider-servises-item:nth-child(3) {
   display: block;
@@ -1109,9 +1102,7 @@ p.header-adress {
   color: #ffffff;
 }
 
-
 /* О нас */
-
 .about-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1751,9 +1742,6 @@ p.paragraph-indent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*-webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;*/
   position: relative;
 }
 
@@ -1937,9 +1925,6 @@ label.radio-new {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; */
   background-color: #f7f3ec;
   margin-bottom: 20px;
   padding-top: 11px;
@@ -2265,13 +2250,10 @@ display: flex;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-
   text-transform: uppercase;
   text-align: center;
-
   color: #000000;
 }
-
 
 .pagination-next a {
   width: 140px;
@@ -2402,52 +2384,6 @@ display: flex;
             transform: translate(-300px, -220px);
   }
 }
-
-/*@-webkit-keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translate(calc(-50% - 10px), calc(-50% - 10px));
-            transform: translate(calc(-50% - 10px), calc(-50% - 10px));
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-            transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-  }
-}*/
-
-/*@keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translate(calc(-50% - 10px), calc(-50% - 10px));
-            transform: translate(calc(-50% - 10px), calc(-50% - 10px));
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-            transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-  }
-}*/
 
 @-webkit-keyframes shake {
   0%,
