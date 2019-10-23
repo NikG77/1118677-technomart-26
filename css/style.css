@@ -59,17 +59,6 @@ img {
   height: 100%;
 }
 
-/*.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}*/
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -309,7 +298,7 @@ input[type="search"]::placeholder {
   opacity: 0.5;
 }
 
-.buy{
+.buy {
   width: 150px;
   height: 42px;
 
@@ -392,7 +381,7 @@ input[type="search"]::placeholder {
 	background: url('../img/icon-phone.svg') no-repeat;
 	}
 
-p.header-adress {
+.header-adress {
   margin: 0px;
   padding-left: 9px;
 
@@ -485,9 +474,11 @@ p.header-adress {
           box-shadow: inset 0px -5px 0 0 #293449;
   background-color: #32425c;
 }
+
 .nav-item-company {
   padding-left: 5px;
 }
+
 .nav-item-catalog {
   padding-left: 1px;
 }
@@ -865,13 +856,6 @@ p.header-adress {
           justify-content: space-between;
 }
  .manufacturer-item {
-  width: 220px;
-  height: 145px;
-  border: solid 1px #eaeaea;
-  margin-bottom: 20px;
-}
-
-.manufacturer-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -882,7 +866,10 @@ p.header-adress {
       -ms-flex-align: center;
           align-items: center;
 
-  height:inherit;
+  width: 220px;
+  height: 145px;
+  border: solid 1px #eaeaea;
+  margin-bottom: 20px;
 }
 
 .img-makita {
@@ -915,20 +902,19 @@ p.header-adress {
   padding-left: 3px;
 }
 
- .manufacturer-item a:hover,
- .manufacturer-item a:focus {
+ .manufacturer-item:hover,
+ .manufacturer-item:focus {
   -webkit-box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
           box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   background-color: #ffffff;
  }
 
- .manufacturer-item a:active {
+ .manufacturer-item:active {
   -webkit-box-shadow: 0px 4px 10px 0 rgba(38, 64, 110, 0.5);
           box-shadow: 0px 4px 10px 0 rgba(38, 64, 110, 0.5);
   background-color: #ffffff;
   opacity: 0.3;
  }
-
 
 /*   Слайдер сервисы */
 
@@ -956,12 +942,14 @@ p.header-adress {
 .description {
   margin: 0;
   padding: 0;
-  margin-bottom: 79px;
-  width: 398px;
-  height: 37px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.description-bottom {
+  margin-bottom: 68px;
 }
 
 .slider-servises-controls {
@@ -1031,13 +1019,7 @@ p.header-adress {
 }
 
 .slider-servises-item p {
-  margin: 0;
   max-width: 377px;
-
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  color: #000000;
 }
 
 .slider-servises-bt {
@@ -1127,8 +1109,8 @@ p.header-adress {
   text-transform: uppercase;
 }
 
-.slogan {
-  width: 520px;
+.slogan,
+.main-contacts  {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1140,21 +1122,10 @@ p.header-adress {
 
 .main-contacts {
   width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.about-us p {
-  margin: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  color: #000000;
+.slogan {
+  width: 520px;
 }
 
 p.paragraph-indent {
@@ -1172,8 +1143,7 @@ p.paragraph-indent {
 }
 
 .main-contacts p {
-  width: 179px ;
-  margin-bottom: 31px;
+    margin-bottom: 31px;
 }
 
 .write-us {
@@ -1205,17 +1175,35 @@ p.paragraph-indent {
   z-index: 1;
 }
 
-.footer-top-row {
+.main-footer,
+.page-footer {
   background-color: #32425c;
-  padding-bottom: 27px;
 }
 
-.footer-top-row .container {
+.footer-top-row,
+.footer-middle-row,
+.footer-bottom-row .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.footer-navigation-list,
+.footer-catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.footer-top-row {
+  margin-bottom: 27px;
 }
 
 .footer-navigation {
@@ -1224,17 +1212,6 @@ p.paragraph-indent {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.footer-navigation-list{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .footer-navigation-list a{
@@ -1261,17 +1238,6 @@ p.paragraph-indent {
   background-color: #32425c;
 }
 
-.footer-middle-row .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .footer-adress {
   margin: 0;
   padding-left: 2px;
@@ -1280,20 +1246,11 @@ p.paragraph-indent {
 
   font-size: 18px;
   line-height: 24px;
-
   color: #f3f7f9;
 }
 
 .footer-catalog-list{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
+   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-left: 88px;
@@ -1301,22 +1258,17 @@ p.paragraph-indent {
 
 .footer-catalog-list a {
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
   color: #ffd180;
 }
 
 .footer-bottom-row {
    background-color: #293449;
    padding-top:38px;
-   padding-bottom: 25px;
+   padding-bottom: 28px;
 }
 
 .footer-bottom-row .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding-left: 11px;
 }
 
@@ -1568,9 +1520,6 @@ p.paragraph-indent {
       flex-wrap: wrap;
   min-height: 59px;
   padding-top: 22px;
-	/*-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center; */
 }
 
 .breadcrumbs-home svg {
@@ -1579,12 +1528,12 @@ p.paragraph-indent {
           transform: translateX(-2px);
 }
 
-.breadcrumbs_item {
+.breadcrumbs-item {
   position: relative;
   margin-right: 40px;
 }
 
-.breadcrumbs_item::after {
+.breadcrumbs-item::after {
   content: "";
   position: absolute;
   right: -24px;
@@ -1596,8 +1545,7 @@ p.paragraph-indent {
 	background-repeat: no-repeat;
 }
 
-
-.breadcrumbs_item a,
+.breadcrumbs-item a,
 .breadcrumbs-activ {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
